@@ -1,0 +1,136 @@
+$text-color: #454545;
+$text-color-hover: #616161;
+$text-color-white: #fff;
+$color-yellow: #FFF2D4;
+$color-pink: #FFDFF7;
+
+body {
+  font-family: 'Inria Sans', sans-serif;
+  color: $text-color;
+
+  p {
+    font-size: 12px;
+    margin: 2px;
+  }
+}
+
+.header {
+  color: $text-color;
+  text-align: center;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+
+  p {
+    flex-direction: row;
+
+    &:hover {
+      cursor: pointer;
+      color: $text-color-hover;
+    }
+  }
+}
+
+.contact-button,
+.read-more-button {
+  border: 1px solid $text-color;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: $text-color;
+  font-size: 12px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $text-color;
+    color: $text-color-white;
+  }
+}
+
+.about {
+  padding-bottom: 15em;
+  display: flex;
+
+  div {
+    margin-left: auto;
+  }
+
+  p {
+    text-align: start;
+  }
+}
+
+.projects {
+  padding-bottom: 15em;
+
+  figure {
+    text-align: center;
+  }
+}
+
+.experience {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.education {
+  p {
+    margin: 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.contact {
+  padding-bottom: 5em;
+  text-align: center;
+  .contact-text {
+    margin-bottom: 5em;
+  }
+
+
+  .names-input-container,
+  .contacts-input-container {
+    // display: flex;
+    // justify-content: space-around;
+    margin-bottom: 2em;
+  }
+
+  input {
+    width: 15%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    cursor: pointer;
+  }
+
+  textarea {
+    cursor: pointer;
+    width: 15%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $text-color;
+  }
+
+  button {
+    cursor: pointer;
+    border: 1px solid $text-color;
+    padding: 10px 30px;
+    background-color: $color-yellow;
+    font-size: 12px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-pink;
+      // color: $text-color-white;
+    }
+  }
+}
+
+footer {
+  background-color: $color-pink;
+  padding: 20px 0;
+  text-align: center;
+}
