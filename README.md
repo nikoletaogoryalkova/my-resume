@@ -3,17 +3,17 @@ This is my personal CV/Resume website. It includes my professional background, s
 
 ## 🛠️ Built With
 
-- HTML5
-- CSS3
+- HTML
+- SASS
 - JavaScript 
 - React
 
 ## 📂 Sections
 
-- About Me
-- Skills
-- Experience
+- About
 - Projects
+- Experience
+- Education
 - Contact
 
 ## 🚀 Deployment
