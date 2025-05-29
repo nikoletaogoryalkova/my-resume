@@ -1,3 +1,5 @@
+
+
 export default function Home() {
     return (
         <>
@@ -7,7 +9,6 @@ export default function Home() {
                 <p>Experience</p>
                 <p>Education</p>
                 <p>Contact</p>
-                <button className="contact-button">Contact Me</button>
             </section>
             <div className="home">
                 <img src="" alt="photo" />

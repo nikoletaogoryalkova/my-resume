@@ -22,7 +22,6 @@ body p {
   color: #616161;
 }
 
-.contact-button,
 .read-more-button {
   border: 1px solid #454545;
   padding: 10px 20px;
@@ -30,9 +29,7 @@ body p {
   color: #454545;
   font-size: 12px;
 }
-.contact-button:hover,
 .read-more-button:hover {
-  cursor: pointer;
   background-color: #454545;
   color: #fff;
 }
@@ -67,46 +64,90 @@ body p {
 }
 
 .contact {
-  padding-bottom: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f5f0;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.contact .contact-form {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+.contact .contact-form h2 {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
-.contact .contact-text {
-  margin-bottom: 5em;
+.contact .contact-form p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #454545;
 }
-.contact .names-input-container,
-.contact .contacts-input-container {
-  margin-bottom: 2em;
+.contact .contact-form .form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-.contact input {
-  width: 15%;
-  padding: 12px 20px;
-  box-sizing: border-box;
+.contact .contact-form .form-row .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-form .form-row .form-group label {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+.contact .contact-form .form-group input,
+.contact .contact-form .form-group textarea {
   border: none;
   border-bottom: 1px solid #454545;
-  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: transparent;
+  resize: none;
+  font-family: inherit;
 }
-.contact textarea {
-  cursor: pointer;
-  width: 15%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 1px solid #454545;
+.contact .contact-form .form-group input:focus,
+.contact .contact-form .form-group textarea:focus {
+  outline: none;
+  border-bottom-color: #454545;
 }
-.contact button {
-  cursor: pointer;
+.contact .contact-form .form-group {
+  margin-bottom: 1rem;
+}
+.contact .contact-form .form-group .phone-input,
+.contact .contact-form .form-group textarea {
+  display: flex;
+  align-items: center;
+}
+.contact .contact-form .form-group textarea, .contact .contact-form .phone-input input {
+  width: 100%;
+}
+.contact .contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
   border: 1px solid #454545;
-  padding: 10px 30px;
-  background-color: #FFF2D4;
-  font-size: 12px;
-}
-.contact button:hover {
+  font-size: 1rem;
   cursor: pointer;
-  background-color: #FFDFF7;
+}
+.contact .contact-form button:hover {
+  background: #454545;
+  color: #fff;
 }
 
 footer {
   background-color: #FFDFF7;
-  padding: 20px 0;
+  padding: 0.5rem;
   text-align: center;
+}
+footer .footer-text {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=App.css.map */
