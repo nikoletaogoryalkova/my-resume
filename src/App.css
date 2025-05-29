@@ -22,12 +22,59 @@ body p {
   color: #616161;
 }
 
+.home {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  height: 60vh;
+  /* full screen height */
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.home .home-text {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  max-width: 50%;
+  padding: 20px;
+}
+.home .home-text h1,
+.home .home-text p,
+.home .home-text .read-more-button {
+  position: relative;
+  z-index: 3;
+}
+.home .home-text .vector-pink {
+  position: absolute;
+  top: -80px;
+  left: -20%;
+  max-width: none;
+  z-index: 1;
+  width: 110%;
+  pointer-events: none;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transform: translateX(-100%);
+}
+.home .home-text .vector-pink.animate-in {
+  transform: translateX(0);
+}
+.home .profile-photo {
+  flex: 1;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
 .read-more-button {
   border: 1px solid #454545;
   padding: 10px 20px;
+  margin-top: 2rem;
   cursor: pointer;
   color: #454545;
-  font-size: 12px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
 }
 .read-more-button:hover {
   background-color: #454545;
@@ -126,7 +173,8 @@ body p {
   display: flex;
   align-items: center;
 }
-.contact .contact-form .form-group textarea, .contact .contact-form .phone-input input {
+.contact .contact-form .form-group textarea,
+.contact .contact-form .phone-input input {
   width: 100%;
 }
 .contact .contact-form button {
