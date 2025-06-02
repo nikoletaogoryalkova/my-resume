@@ -4,34 +4,48 @@ export default function Footer() {
             <div>
                 <img className="logo" src="/Logo.svg" alt="logo" />
             </div>
-            <p>Email: nikoletaogoryalkova@gmail.com</p>
-            <a
-                className="linkedin-mail-icon"
-                href="https://www.linkedin.com/in/nikoleta-ogoryalkova-662a70125/"
-                rel="noopener noreferrer"
-                title="Message me on LinkedIn"
-                target="_blank"
-            >
-                <img
-                    src="/Linkedin-icon.svg"
-                    alt="linkedin-icon"
-                />
-            </a>
-            <a
-                className="email-icon"
-                href="mailto:nikoletaogoryalkova@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Send me an email"
-            >
-                <img
-                    src="/Mail-icon.svg"
-                    alt="mail-icon"
-                />
-            </a>
             <div className="footer-text">
-                <p>&copy; 2025 by Nikoleta Ogoryalkova.</p>
+                <p><strong>&copy; 2025 by Nikoleta Ogoryalkova</strong></p>
             </div>
+            <div className="social-media">
+                <a
+                    className="email-icon"
+                    href="mailto:nikoletaogoryalkova@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Send me an email"
+                >
+                    <img
+                        src="/Mail-icon.svg"
+                        alt="mail-icon"
+                    />
+                </a>
+                <a
+                     className="linkedin-mail-icon"
+                     href="https://www.linkedin.com/in/YOUR_USERNAME/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     title="Message me on LinkedIn"
+                >
+                    <img
+                        src="/Linkedin-icon.svg"
+                        alt="linkedin-icon"
+                    />
+                </a>
+                <a
+                    className="github-icon"
+                    href="https://github.com/nikoletaogoryalkova"
+                    rel="noopener noreferrer"
+                      title="View my GitHub"
+                    target="_blank"
+                >
+                    <img
+                        src="/Github-icon.svg"
+                        alt="Github-icon"
+                    />
+                </a>
+            </div>
+
         </footer>
     );
 }

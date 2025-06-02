@@ -24,7 +24,7 @@ export default function Projects() {
         <section className="projects">
             <div className="projects-heading">
                 <h2>Projects</h2>
-                <p>MY LATEST WORK. <a href="#">SEE MORE </a></p>
+                {/* <p>My latest work. <a href="#">See More </a></p> */}
             </div>
             <div className="projects-grid">
                 {projects.map(project => (

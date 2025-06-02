@@ -14,7 +14,13 @@ export default function About() {
    
    return (
       <section className="about">
-         <h2>About</h2>
+            <h2>About</h2>
+         <img
+               className={`vector-yellow ${animate ? 'animate-in' : ''}`}
+               src="/VectorYellow.png"
+               alt="vector-yellow" 
+               />
+      
          <div className="about-text">
             <p>I`m <strong>Nikoleta Ogoryalkova</strong>, a front-end developer with 5 years of experience
                building responsive and user-friendly websites.</p>
@@ -23,10 +29,6 @@ export default function About() {
                dynamic interfaces and single-page applications.</p>
             <p>I also use Photoshop, Figma for creating simple design elements when needed.
                I enjoy turning ideas into clean, functional, and accessible websites that work on all devices.</p>
-            <img
-               className={`vector-yellow ${animate ? 'animate-in' : ''}`}
-               src="/VectorYellow.png"
-               alt="vector-yellow" />
          </div>
       </section>
    );

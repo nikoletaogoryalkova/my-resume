@@ -8,10 +8,6 @@ body {
   font-family: "Inria Sans", sans-serif;
   color: #474747;
 }
-body p {
-  font-size: 12px;
-  margin: 2px;
-}
 
 .header {
   color: #474747;
@@ -22,11 +18,11 @@ body p {
 }
 .header p {
   flex-direction: row;
+  transition: transform 0.2s ease;
 }
 .header p:hover {
   cursor: pointer;
-  color: #7b7b7b;
-  transition: all 0.3s ease;
+  transform: scale(1.1);
 }
 
 .home {
@@ -91,15 +87,13 @@ body p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 0;
-  height: 60vh;
-  z-index: 2;
-  max-width: 50%;
-  flex: 1;
+  padding: 6rem 2rem;
+  z-index: 1;
 }
 .about .about-text {
-  flex: 2;
   position: relative;
+  max-width: 700px;
+  z-index: 3;
 }
 .about .about-text p {
   position: relative;
@@ -110,19 +104,16 @@ body p {
 }
 .about .vector-yellow {
   position: absolute;
-  top: -50%;
+  top: 110%;
   right: 0%;
-  /* changed from left */
-  max-width: none;
+  transform: translate(100%, -50%);
   z-index: 1;
-  width: 90%;
+  width: 30%;
   pointer-events: none;
   transition: transform 1s ease-out, opacity 1s ease-out;
-  transform: translateX(100%);
-  /* changed to right */
 }
 .about .vector-yellow.animate-in {
-  transform: translateX(0);
+  transform: translate(0%, -50%);
 }
 
 .projects {
@@ -179,13 +170,50 @@ body p {
 
 .experience {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 6rem 2rem;
+  z-index: 1;
+}
+.experience .experience-text {
+  position: relative;
+  max-width: 700px;
+  z-index: 3;
+}
+.experience .experience-text p {
+  position: relative;
+  z-index: 3;
+  line-height: 1.7;
+}
+.experience .experience-text h2 {
+  position: relative;
+  z-index: 3;
+  margin: 1.5rem 0;
+}
+.experience .vector-pink {
+  position: absolute;
+  top: 250%;
+  right: 0;
+  transform: translate(100%, -50%);
+  z-index: 1;
+  width: 30%;
+  pointer-events: none;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+.experience .vector-pink.animate-in {
+  transform: translate(0%, -50%);
 }
 
-.education p {
-  margin: 12px;
-  font-size: 14px;
-  font-weight: 600;
+.education {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 2rem;
+}
+.education .education-text p {
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-bottom: 30px;
 }
 
 .contact {
@@ -271,27 +299,27 @@ body p {
 
 footer {
   background-color: #FFDFF7;
-  padding: 0.5rem;
-  text-align: center;
-}
-footer .footer-text {
+  padding: 0.7rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 footer .linkedin-mail-icon,
-footer .email-icon {
+footer .email-icon,
+footer .github-icon {
   display: inline-block;
 }
 footer .linkedin-mail-icon img,
-footer .email-icon img {
+footer .email-icon img,
+footer .github-icon img {
   width: 40px;
   height: 40px;
   transition: transform 0.3s ease;
 }
 footer .linkedin-mail-icon img:hover,
-footer .email-icon img:hover {
+footer .email-icon img:hover,
+footer .github-icon img:hover {
   transform: scale(1.1);
 }
 footer .logo {
-  width: 20px;
+  width: 35px;
 }/*# sourceMappingURL=App.css.map */

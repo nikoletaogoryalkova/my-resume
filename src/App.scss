@@ -13,11 +13,6 @@ $color-pink: #FFDFF7;
 body {
     font-family: 'Inria Sans', sans-serif;
     color: $text-color;
-
-    p {
-        font-size: 12px;
-        margin: 2px;
-    }
 }
 
 .header {
@@ -29,11 +24,12 @@ body {
 
     p {
         flex-direction: row;
+        transition: transform 0.2s ease;
 
         &:hover {
             cursor: pointer;
-            color: $text-color-hover;
-            transition: all 0.3s ease;
+            // color: $text-color-hover;
+            transform: scale(1.1);
         }
     }
 }
@@ -104,20 +100,20 @@ body {
 }
 
 .about {
-    // padding: 10em 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4rem 0;
-    height: 60vh;
-    z-index: 2;
-    max-width: 50%;
-    flex: 1;
+    padding: 6rem 2rem;
+    // height: 60vh;
+    z-index: 1;
+    // max-width: 50%;
+    // flex: 1;
 
     .about-text {
-        flex: 2;
+        // flex: 2;
         position: relative;
-        // max-width: 800px;
+        max-width: 700px;
+        z-index: 3;
 
         p {
             position: relative;
@@ -130,20 +126,17 @@ body {
 
     .vector-yellow {
         position: absolute;
-        top: -50%;
+        top: 110%;
         right: 0%;
-        /* changed from left */
-        max-width: none;
+        transform: translate(100%, -50%);
         z-index: 1;
-        width: 90%;
+        width: 30%;
         pointer-events: none;
         transition: transform 1s ease-out, opacity 1s ease-out;
-        transform: translateX(100%);
-        /* changed to right */
     }
 
     .vector-yellow.animate-in {
-        transform: translateX(0);
+        transform: translate(0%, -50%);
     }
 }
 
@@ -218,15 +211,60 @@ body {
 
 .experience {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 6rem 2rem;
+    // height: 60vh;
+    z-index: 1;
+    // max-width: 50%;
+    // flex: 1;
 
+    .experience-text {
+        position: relative;
+        max-width: 700px;
+        z-index: 3;
+
+        p {
+            position: relative;
+            z-index: 3;
+            line-height: 1.7;
+        }
+        h2{
+            position: relative;
+            z-index: 3;
+            margin: 1.5rem 0;
+        }
+    }
+
+    .vector-pink {
+        position: absolute;
+        top: 250%;
+        right: 0;
+        transform: translate(100%, -50%);
+        z-index: 1;
+        width: 30%;
+        pointer-events: none;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .vector-pink.animate-in {
+        transform: translate(0%, -50%);
+    }
 }
 
 .education {
-    p {
-        margin: 12px;
-        font-size: 14px;
-        font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 2rem;
+
+    .education-text {
+        p {
+            font-size: 1.3rem;
+            line-height: 1;
+            margin-bottom: 30px;
+
+        }
     }
 }
 
@@ -328,16 +366,13 @@ body {
 
 footer {
     background-color: $color-pink;
-    padding: 0.5rem;
-    text-align: center;
-
-    .footer-text {
-        display: flex;
-        justify-content: space-between;
-    }
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-around;
 
     .linkedin-mail-icon,
-    .email-icon {
+    .email-icon,
+    .github-icon {
         display: inline-block;
 
         img {
@@ -350,10 +385,10 @@ footer {
             }
         }
     }
- 
+
 
     .logo {
-        width: 20px;
+        width: 35px;
     }
 }
 
