@@ -22,7 +22,11 @@ export default function Home() {
             </section>
             <div className="home">
                 <div className="home-text">
-                    <img  className={`vector-pink ${animate ? 'animate-in' : ''}`} src="/VectorPink.png" alt="vector-pink" />
+                    <img
+                        className={`vector-pink ${animate ? 'animate-in' : ''}`}
+                        src="/VectorPink.png"
+                        alt="vector-pink" />
+                        
                     <h1>Nikoleta Ogoryalkova</h1>
                     <p>Welcome to my online CV! I specialize in web</p>
                     <p> development and have a passion for creating unique</p>

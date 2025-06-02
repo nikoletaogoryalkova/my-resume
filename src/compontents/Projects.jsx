@@ -1,12 +1,43 @@
 export default function Projects() {
+
+    const projects = [
+        {
+            id: 1,
+            title: 'PROJECT 01',
+            image: '/Project1.png', // Replace with actual image path
+        },
+        {
+            id: 2,
+            title: 'PROJECT 02',
+            image: 'Project2.jpg',
+        },
+        {
+            id: 3,
+            title: 'PROJECT 03',
+            image: 'Project1.png',
+        },
+    ];
+
+
+
     return (
         <section className="projects">
-            <h2>Projects</h2>
-            <figure>
-                <img src="" alt="Project 1" />
-                <img src="" alt="Project 2" />
-                <img src="" alt="Project 3" />
-            </figure>
+            <div className="projects-heading">
+                <h2>Projects</h2>
+                <p>MY LATEST WORK. <a href="#">SEE MORE </a></p>
+            </div>
+            <div className="projects-grid">
+                {projects.map(project => (
+                    <div key={project.id} className="projects-item">
+                        <img src={project.image} alt={project.title} />
+                        <div className="projects-label">{project.title}</div>
+                    </div>
+                ))}
+            </div>
         </section>
     );
-}
+};
+
+
+{/* <img src="/Project1.png" alt="Project1" />
+<img src="/Project2.jpg" alt="Project1" /> */}

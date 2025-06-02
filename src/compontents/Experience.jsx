@@ -1,7 +1,8 @@
 export default function Experience() {
     return (
         <section className="experience">
-            <img src="" alt="vector-pink" />
+         <h2>Experience</h2>
+            <img src="/VectorPink.png" alt="vector-pink" />
             <div className="experience-text">
             <h2>Front-End Developer</h2>
             <p>Worked closely with cross-functional teams, including designers, marketers, and backend developers,</p>

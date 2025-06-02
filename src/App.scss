@@ -1,8 +1,14 @@
-$text-color: #454545;
-$text-color-hover: #616161;
+$text-color: #474747;
+$text-color-hover: #7b7b7b;
 $text-color-white: #fff;
 $color-yellow: #FFF2D4;
 $color-pink: #FFDFF7;
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Inria Sans', sans-serif;
@@ -16,10 +22,10 @@ body {
 
 .header {
     color: $text-color;
-    text-align: center;
     display: flex;
-    gap: 50px;
     justify-content: center;
+    gap: 60px;
+    margin-top: 1rem;
 
     p {
         flex-direction: row;
@@ -27,6 +33,7 @@ body {
         &:hover {
             cursor: pointer;
             color: $text-color-hover;
+            transition: all 0.3s ease;
         }
     }
 }
@@ -34,14 +41,12 @@ body {
 .home {
     display: flex;
     align-items: center;
-    justify-self: center;
-    // padding: 40px;
+    justify-content: space-evenly;
+    padding: 4rem 0;
     height: 60vh;
-    /* full screen height */
-    gap: 40px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 4rem;
+    // margin-bottom: 4rem;
 
     .home-text {
         flex: 1;
@@ -59,11 +64,11 @@ body {
 
         .vector-pink {
             position: absolute;
-            top: -80px;
-            left: -20%;
+            top: -50%;
+            left: -22%;
             max-width: none;
             z-index: 1;
-            width: 110%;
+            width: 65%;
             pointer-events: none;
             transition: transform 1s ease-out, opacity 1s ease-out;
             transform: translateX(-100%);
@@ -76,13 +81,14 @@ body {
 
     .profile-photo {
         flex: 1;
-        max-width: 300px;
+        max-width: 400px;
         height: auto;
         border-radius: 50%;
     }
 }
 
 .read-more-button {
+    transition: all 0.3s ease;
     border: 1px solid $text-color;
     padding: 10px 20px;
     margin-top: 2rem;
@@ -98,23 +104,115 @@ body {
 }
 
 .about {
-    padding-bottom: 15em;
+    // padding: 10em 0;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    height: 60vh;
+    z-index: 2;
+    max-width: 50%;
+    flex: 1;
 
-    div {
-        margin-left: auto;
+    .about-text {
+        flex: 2;
+        position: relative;
+        // max-width: 800px;
+
+        p {
+            position: relative;
+            z-index: 3;
+            font-size: 1rem;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
     }
 
-    p {
-        text-align: start;
+    .vector-yellow {
+        position: absolute;
+        top: -50%;
+        right: 0%;
+        /* changed from left */
+        max-width: none;
+        z-index: 1;
+        width: 90%;
+        pointer-events: none;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+        transform: translateX(100%);
+        /* changed to right */
+    }
+
+    .vector-yellow.animate-in {
+        transform: translateX(0);
     }
 }
 
 .projects {
-    padding-bottom: 15em;
+    padding: 4rem 2rem;
+    text-align: center;
 
-    figure {
-        text-align: center;
+    &-heading {
+        margin-bottom: 2rem;
+
+        // h2 {
+        //   font-size: 2.5rem;
+        //   font-weight: bold;
+        //   span {
+        //     color: #b0b4c4;
+        //     margin-right: 0.5rem;
+        //   }
+        // }
+        p {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+
+            a {
+                color: $text-color;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $text-color-hover;
+                }
+            }
+        }
+    }
+
+    &-grid {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: brightness(70%);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            padding-top: 56.25%; // 16:9 aspect ratio
+        }
+
+        .projects-label {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -218,6 +316,7 @@ body {
             border: 1px solid $text-color;
             font-size: 1rem;
             cursor: pointer;
+            transition: all 0.3s ease;
 
             &:hover {
                 background: $text-color;
@@ -234,7 +333,27 @@ footer {
 
     .footer-text {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .linkedin-mail-icon,
+    .email-icon {
+        display: inline-block;
+
+        img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+ 
+
+    .logo {
+        width: 20px;
     }
 }
 
