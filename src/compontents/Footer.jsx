@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="social-media">
                 <a
                     className="email-icon"
-                    href="mailto:nikoletaogoryalkova@gmail.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=nikoletaogoryalkova@gmail.com&su=Let%27s%20Work%20Together"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Send me an email"
@@ -21,11 +21,11 @@ export default function Footer() {
                     />
                 </a>
                 <a
-                     className="linkedin-mail-icon"
-                     href="https://www.linkedin.com/in/nikoleta-ogoryalkova-662a70125/"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     title="Message me on LinkedIn"
+                    className="linkedin-mail-icon"
+                    href="https://www.linkedin.com/in/nikoleta-ogoryalkova-662a70125/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Message me on LinkedIn"
                 >
                     <img
                         src="/Linkedin-icon.svg"
@@ -36,7 +36,7 @@ export default function Footer() {
                     className="github-icon"
                     href="https://github.com/nikoletaogoryalkova"
                     rel="noopener noreferrer"
-                      title="View my GitHub"
+                    title="View my GitHub"
                     target="_blank"
                 >
                     <img
