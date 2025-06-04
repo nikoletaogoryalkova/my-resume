@@ -1,6 +1,6 @@
 export default function Education() {
     return (
-        <section className="education">
+        <section id="education" className="education">
             <h2>Education</h2>
             <div className="education-text">
             <p>Bachelor`s Degree in Automatics, IT and Control of Systems</p>

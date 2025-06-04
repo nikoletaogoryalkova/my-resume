@@ -14,7 +14,7 @@ export default function Experience() {
     // }, []);
 
     return (
-        <section className="experience">
+        <section id="experience" className="experience">
             <h2>Experience</h2>
 
             {/* <img className={`vector-pink ${animate ? 'animate-in' : ''}`}

@@ -13,7 +13,7 @@ export default function About() {
    // }, []);
 
    return (
-      <section className="about">
+      <section id="about" className="about">
          <h2>About</h2>
          {/* <img
                className={`vector-yellow ${animate ? 'animate-in' : ''}`}
