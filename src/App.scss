@@ -380,14 +380,17 @@ body {
     height: 25px;
 }
 
-.react-tel-input .flag-dropdown,
+
 .react-tel-input .flag-dropdown.open,
 .react-tel-input .selected-flag,
 .react-tel-input .selected-flag.open,
 .react-tel-input .flag-dropdown:hover,
 .react-tel-input .flag-dropdown:focus {
-    // border-radius: 50%;
     border: none;
+}
+
+.react-tel-input .flag-dropdown {
+    border: none !important;
 }
 
 footer {
@@ -395,6 +398,10 @@ footer {
     padding: 0.7rem;
     display: flex;
     justify-content: space-around;
+
+    p {
+        margin-top: 1rem;
+    }
 
     .linkedin-mail-icon,
     .email-icon,

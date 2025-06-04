@@ -310,7 +310,6 @@ body {
   height: 25px;
 }
 
-.react-tel-input .flag-dropdown,
 .react-tel-input .flag-dropdown.open,
 .react-tel-input .selected-flag,
 .react-tel-input .selected-flag.open,
@@ -319,11 +318,18 @@ body {
   border: none;
 }
 
+.react-tel-input .flag-dropdown {
+  border: none !important;
+}
+
 footer {
   background-color: #FFDFF7;
   padding: 0.7rem;
   display: flex;
   justify-content: space-around;
+}
+footer p {
+  margin-top: 1rem;
 }
 footer .linkedin-mail-icon,
 footer .email-icon,
