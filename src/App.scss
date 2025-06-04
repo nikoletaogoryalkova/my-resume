@@ -372,16 +372,22 @@ body {
     border-radius: 0;
     margin-left: 2rem;
     width: 89%;
+
 }
-.contact .contact-form .form-group textarea{
+
+.contact .contact-form .form-group textarea {
     width: 97%;
     height: 25px;
 }
 
 .react-tel-input .flag-dropdown,
 .react-tel-input .flag-dropdown.open,
-.react-tel-input .flag-dropdown {
-    border-radius: 50%;
+.react-tel-input .selected-flag,
+.react-tel-input .selected-flag.open,
+.react-tel-input .flag-dropdown:hover,
+.react-tel-input .flag-dropdown:focus {
+    // border-radius: 50%;
+    border: none;
 }
 
 footer {

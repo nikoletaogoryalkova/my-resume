@@ -33,23 +33,27 @@ export default function Contact() {
     }, []);
 
     const handlePhoneChange = (value) => {
-        setFormData({
-            ...formData,
+        setFormData((prevData) => ({
+            ...prevData,
             phone: value,
-        });
+        }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:');
-        //Reset
-        setFormData({
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            message: '',
+
+        const response = await fetch("https://formspree.io/f/mnnvnpow", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
         });
+
+        if (response.ok) {
+            alert("Message sent!");
+            setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
+        } else {
+            alert("Something went wrong.");
+        }
     };
 
     return (
@@ -97,6 +101,7 @@ export default function Contact() {
                         <label>Phone</label>
                         <div className="phone-input">
                             <PhoneInput
+                             key={formData.phone.length === 0 ? 'empty' : 'filled'}
                                 className="phone"
                                 country={countryCode}
                                 value={formData.phone}

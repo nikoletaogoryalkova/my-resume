@@ -312,8 +312,11 @@ body {
 
 .react-tel-input .flag-dropdown,
 .react-tel-input .flag-dropdown.open,
-.react-tel-input .flag-dropdown {
-  border-radius: 50%;
+.react-tel-input .selected-flag,
+.react-tel-input .selected-flag.open,
+.react-tel-input .flag-dropdown:hover,
+.react-tel-input .flag-dropdown:focus {
+  border: none;
 }
 
 footer {
