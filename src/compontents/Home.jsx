@@ -4,6 +4,7 @@ import { ArrowUp } from 'lucide-react';
 export default function Home() {
     const [animate, setAnimate] = useState(false);
     const [showScroll, setShowScroll] = useState(false);
+    const [navOpen, setNavOpen] = useState(false);
 
     useEffect(() => {
         // Optional delay (like setTimeout)
