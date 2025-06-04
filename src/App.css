@@ -299,6 +299,23 @@ body {
   color: #fff;
 }
 
+.contact .contact-form .form-group input[type=tel] {
+  border-radius: 0;
+  margin-left: 2rem;
+  width: 89%;
+}
+
+.contact .contact-form .form-group textarea {
+  width: 97%;
+  height: 25px;
+}
+
+.react-tel-input .flag-dropdown,
+.react-tel-input .flag-dropdown.open,
+.react-tel-input .flag-dropdown {
+  border-radius: 50%;
+}
+
 footer {
   background-color: #FFDFF7;
   padding: 0.7rem;

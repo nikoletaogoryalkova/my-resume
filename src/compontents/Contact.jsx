@@ -97,6 +97,7 @@ export default function Contact() {
                         <label>Phone</label>
                         <div className="phone-input">
                             <PhoneInput
+                                className="phone"
                                 country={countryCode}
                                 value={formData.phone}
                                 onChange={handlePhoneChange}
