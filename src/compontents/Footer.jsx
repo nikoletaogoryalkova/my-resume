@@ -22,7 +22,7 @@ export default function Footer() {
                 </a>
                 <a
                      className="linkedin-mail-icon"
-                     href="https://www.linkedin.com/in/YOUR_USERNAME/"
+                     href="https://www.linkedin.com/in/nikoleta-ogoryalkova-662a70125/"
                      target="_blank"
                      rel="noopener noreferrer"
                      title="Message me on LinkedIn"

@@ -61,10 +61,10 @@ body {
         .vector-pink {
             position: absolute;
             top: -50%;
-            left: -22%;
+            left: -24%;
             max-width: none;
             z-index: 1;
-            width: 65%;
+            width: 75%;
             pointer-events: none;
             transition: transform 1s ease-out, opacity 1s ease-out;
             transform: translateX(-100%);
@@ -108,6 +108,7 @@ body {
     z-index: 1;
     // max-width: 50%;
     // flex: 1;
+    background-color: $color-yellow;
 
     .about-text {
         // flex: 2;
@@ -141,7 +142,7 @@ body {
 }
 
 .projects {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
 
     &-heading {
@@ -157,7 +158,7 @@ body {
         // }
         p {
             margin-top: 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1rem;
 
             a {
                 color: $text-color;
@@ -204,7 +205,7 @@ body {
             left: 1rem;
             color: white;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 }
@@ -213,15 +214,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6rem 2rem;
+    padding:  2rem;
     // height: 60vh;
     z-index: 1;
     // max-width: 50%;
     // flex: 1;
+    background-color: $color-pink;
 
     .experience-text {
         position: relative;
-        max-width: 700px;
+        // max-width: 700px;
         z-index: 3;
 
         p {
@@ -260,9 +262,10 @@ body {
 
     .education-text {
         p {
-            font-size: 1.3rem;
+            font-size: 1rem;
             line-height: 1;
             margin-bottom: 30px;
+            font-weight: bold;
 
         }
     }
@@ -272,7 +275,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f7f5f0;
+    background: $color-yellow;
     min-height: 100vh;
     padding: 2rem;
 
@@ -292,7 +295,7 @@ body {
 
         p {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-size: 1rem;
             color: $text-color;
         }

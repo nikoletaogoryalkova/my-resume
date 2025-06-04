@@ -19,3 +19,5 @@ This is my personal CV/Resume website. It includes my professional background, s
 ## 🚀 Deployment
 
 Hosted using GitHub Pages: [https://github.com/nikoletaogoryalkova/my-resume](https://github.com/nikoletaogoryalkova/my-resume)
+
+- Still in progress...
