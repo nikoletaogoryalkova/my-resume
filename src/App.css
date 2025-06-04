@@ -105,19 +105,6 @@ body {
   line-height: 1;
   margin-bottom: 15px;
 }
-.about .vector-yellow {
-  position: absolute;
-  top: 110%;
-  right: 0%;
-  transform: translate(100%, -50%);
-  z-index: 1;
-  width: 30%;
-  pointer-events: none;
-  transition: transform 1s ease-out, opacity 1s ease-out;
-}
-.about .vector-yellow.animate-in {
-  transform: translate(0%, -50%);
-}
 
 .projects {
   padding: 6rem 2rem;
@@ -125,19 +112,6 @@ body {
 }
 .projects-heading {
   margin-bottom: 2rem;
-}
-.projects-heading p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-}
-.projects-heading p a {
-  color: #474747;
-  text-decoration: none;
-  font-weight: bold;
-}
-.projects-heading p a:hover {
-  text-decoration: underline;
-  color: #7b7b7b;
 }
 .projects-grid {
   display: flex;
@@ -156,6 +130,7 @@ body {
   height: auto;
   display: block;
   filter: brightness(70%);
+  cursor: pointer;
 }
 .projects-item::after {
   content: "";
@@ -176,35 +151,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  z-index: 1;
   background-color: #FFDFF7;
 }
-.experience .experience-text {
-  position: relative;
-  z-index: 3;
-}
 .experience .experience-text p {
-  position: relative;
-  z-index: 3;
   line-height: 1.7;
 }
 .experience .experience-text h2 {
-  position: relative;
-  z-index: 3;
   margin: 1.5rem 0;
-}
-.experience .vector-pink {
-  position: absolute;
-  top: 250%;
-  right: 0;
-  transform: translate(100%, -50%);
-  z-index: 1;
-  width: 30%;
-  pointer-events: none;
-  transition: transform 1s ease-out, opacity 1s ease-out;
-}
-.experience .vector-pink.animate-in {
-  transform: translate(0%, -50%);
 }
 
 .education {
@@ -352,6 +305,11 @@ footer .github-icon img:hover {
 }
 footer .logo {
   width: 35px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+footer .logo:hover {
+  transform: scale(1.05);
 }
 
 .scroll-to-top {

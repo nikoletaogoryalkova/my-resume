@@ -1,14 +1,15 @@
-$text-color: #474747;
-$text-color-hover: #7b7b7b;
-$text-color-white: #fff;
-$color-yellow: #FFF2D4;
-$color-pink: #FFDFF7;
-
 * {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
+
+// Colors
+$text-color: #474747;
+$text-color-hover: #7b7b7b;
+$text-color-white: #fff;
+$color-yellow: #FFF2D4;
+$color-pink: #FFDFF7;
 
 body {
     font-family: 'Inria Sans', sans-serif;
@@ -30,7 +31,6 @@ body {
 
         &:hover {
             cursor: pointer;
-            // color: $text-color-hover;
             transform: scale(1.1);
         }
     }
@@ -44,7 +44,6 @@ body {
     height: 60vh;
     position: relative;
     overflow: hidden;
-    // margin-bottom: 4rem;
 
     .home-text {
         flex: 1;
@@ -106,14 +105,10 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 6rem 2rem;
-    // height: 60vh;
     z-index: 1;
-    // max-width: 50%;
-    // flex: 1;
     background-color: $color-yellow;
 
     .about-text {
-        // flex: 2;
         position: relative;
         max-width: 700px;
         z-index: 3;
@@ -126,21 +121,6 @@ body {
             margin-bottom: 15px;
         }
     }
-
-    .vector-yellow {
-        position: absolute;
-        top: 110%;
-        right: 0%;
-        transform: translate(100%, -50%);
-        z-index: 1;
-        width: 30%;
-        pointer-events: none;
-        transition: transform 1s ease-out, opacity 1s ease-out;
-    }
-
-    .vector-yellow.animate-in {
-        transform: translate(0%, -50%);
-    }
 }
 
 .projects {
@@ -149,30 +129,21 @@ body {
 
     &-heading {
         margin-bottom: 2rem;
+        // p {
+        //     margin-top: 0.5rem;
+        //     font-size: 1rem;
 
-        // h2 {
-        //   font-size: 2.5rem;
-        //   font-weight: bold;
-        //   span {
-        //     color: #b0b4c4;
-        //     margin-right: 0.5rem;
-        //   }
+        //     // a {
+        //     //     color: $text-color;
+        //     //     text-decoration: none;
+        //     //     font-weight: bold;
+
+        //     //     &:hover {
+        //     //         text-decoration: underline;
+        //     //         color: $text-color-hover;
+        //     //     }
+        //     // }
         // }
-        p {
-            margin-top: 0.5rem;
-            font-size: 1rem;
-
-            a {
-                color: $text-color;
-                text-decoration: none;
-                font-weight: bold;
-
-                &:hover {
-                    text-decoration: underline;
-                    color: $text-color-hover;
-                }
-            }
-        }
     }
 
     &-grid {
@@ -193,12 +164,13 @@ body {
             height: auto;
             display: block;
             filter: brightness(70%);
+            cursor: pointer;
         }
 
         &::after {
             content: "";
             display: block;
-            padding-top: 56.25%; // 16:9 aspect ratio
+            padding-top: 56.25%; 
         }
 
         .projects-label {
@@ -217,43 +189,16 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    // height: 60vh;
-    z-index: 1;
-    // max-width: 50%;
-    // flex: 1;
     background-color: $color-pink;
 
     .experience-text {
-        position: relative;
-        // max-width: 700px;
-        z-index: 3;
-
         p {
-            position: relative;
-            z-index: 3;
             line-height: 1.7;
         }
 
         h2 {
-            position: relative;
-            z-index: 3;
             margin: 1.5rem 0;
         }
-    }
-
-    .vector-pink {
-        position: absolute;
-        top: 250%;
-        right: 0;
-        transform: translate(100%, -50%);
-        z-index: 1;
-        width: 30%;
-        pointer-events: none;
-        transition: transform 1s ease-out, opacity 1s ease-out;
-    }
-
-    .vector-pink.animate-in {
-        transform: translate(0%, -50%);
     }
 }
 
@@ -286,7 +231,6 @@ body {
         background: #fff;
         padding: 2.5rem;
         border-radius: 12px;
-        // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 600px;
 
@@ -421,10 +365,16 @@ footer {
         }
     }
 
-
     .logo {
         width: 35px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
+
 }
 
 .scroll-to-top {
@@ -445,6 +395,8 @@ footer {
         background-color: $text-color-hover;
     }
 }
+
+//Responsive 
 
 
 //@media (max-width: 768px) {
