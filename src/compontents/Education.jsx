@@ -9,17 +9,24 @@ export default function Education() {
             <h2>Education</h2>
             <div className="education-text">
                 <div className="education-item">
-                    <GraduationCap size={30} />
+                    <span className={`icon ${inView ? 'rotate-loop' : ''}`}>
+                        <GraduationCap size={30} />
+                    </span>
                     <p>Bachelor`s Degree in Automatics, IT and Control of Systems</p>
                 </div>
                 <div className="education-item">
-                    <GraduationCap size={30} />
+                    <span className={`icon ${inView ? 'rotate-loop' : ''}`}>
+                        <GraduationCap size={30} />
+                    </span>
                     <p>Master`s Degree in Web Design</p>
                 </div>
                 <div className="education-item">
-                    <BadgeCheck size={30} />
+                    <span className={`icon ${inView ? 'rotate-loop' : ''}`}>
+                        <BadgeCheck size={30} />
+                    </span>
                     <p>Certifications in Front-End Technologies</p>
                 </div>
+
             </div>
         </section>
     );
