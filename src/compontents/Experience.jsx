@@ -1,26 +1,12 @@
-// import { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 
 export default function Experience() {
-
-
-    // const [animate, setAnimate] = useState(false);
-
-    // useEffect(() => {
-    //     // Optional delay (like setTimeout)
-    //     const timeout = setTimeout(() => {
-    //         setAnimate(true);
-    //     }, 300); // delay in milliseconds
-    //     return () => clearTimeout(timeout);
-    // }, []);
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     return (
-        <section id="experience" className="experience">
+        <section id="experience" className={`experience fade-in-up ${inView ? 'visible' : ''}`} ref={ref}>
             <h2>Experience</h2>
-
-            {/* <img className={`vector-pink ${animate ? 'animate-in' : ''}`}
-                src="/VectorPink.png"
-                alt="vector-pink"
-            /> */}
             <div className="experience-text">
                 <h2>Front-End Developer</h2>
                 <p>Worked closely with cross-functional teams,

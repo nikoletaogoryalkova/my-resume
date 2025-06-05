@@ -1,25 +1,12 @@
-// import { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function About() {
+   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
-   // const [animate, setAnimate] = useState(false);
-
-   // useEffect(() => {
-   //    // Optional delay (like setTimeout)
-   //    const timeout = setTimeout(() => {
-   //       setAnimate(true);
-   //    }, 300); // delay in milliseconds
-   //    return () => clearTimeout(timeout);
-   // }, []);
 
    return (
-      <section id="about" className="about">
+      <section id="about" className={`about fade-in-up ${inView ? 'visible' : ''}`} ref={ref}>
          <h2>About</h2>
-         {/* <img
-               className={`vector-yellow ${animate ? 'animate-in' : ''}`}
-               src="/VectorYellow.png"
-               alt="vector-yellow" 
-               /> */}
 
          <div className="about-text">
             <p>I`m <strong>Nikoleta Ogoryalkova</strong>, a front-end developer with 5 years of experience</p>
