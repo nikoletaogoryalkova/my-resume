@@ -157,12 +157,13 @@ body {
   justify-content: space-between;
   padding: 2rem;
   background-color: #FFDFF7;
+  padding: 2rem;
 }
 .experience .experience-text p {
   line-height: 1.7;
 }
 .experience .experience-text h2 {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .education {
@@ -171,10 +172,26 @@ body {
   justify-content: space-between;
   padding: 6rem 2rem;
 }
-.education .education-text p {
+.education .education-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.education .education-text .education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
   font-size: 1rem;
-  line-height: 1;
-  margin-bottom: 30px;
+  color: #474747;
+}
+.education .education-text .education-item svg {
+  flex-shrink: 0;
+  color: #7b7b7b;
+}
+.education .education-text .education-item p {
+  margin: 0;
+  line-height: 1.6;
   font-weight: bold;
 }
 
@@ -267,7 +284,8 @@ body {
 
 .contact .contact-form .form-group textarea {
   width: 97%;
-  height: 25px;
+  height: 2rem;
+  overflow: hidden;
 }
 
 .react-tel-input .flag-dropdown.open,
