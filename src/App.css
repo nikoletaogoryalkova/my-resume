@@ -515,7 +515,7 @@ footer .logo:hover {
     left: 8%;
   }
   .home .profile-photo {
-    max-width: 200px;
+    max-width: 50px;
   }
 }
 @media (max-width: 576px) {
