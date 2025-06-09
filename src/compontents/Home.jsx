@@ -4,6 +4,7 @@ import { ArrowUp } from 'lucide-react';
 export default function Home() {
     const [animate, setAnimate] = useState(false);
     const [showScroll, setShowScroll] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -32,14 +33,23 @@ export default function Home() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(prev => !prev);
+    };
+
     return (
         <>
             <nav className="nav">
-                <button onClick={() => scrollToSection('about')}>About</button>
-                <button onClick={() => scrollToSection('projects')}>Projects</button>
-                <button onClick={() => scrollToSection('experience')}>Experience</button>
-                <button onClick={() => scrollToSection('education')}>Education</button>
-                <button onClick={() => scrollToSection('contact')}>Contact</button>
+                <button className="burger" onClick={toggleMenu}>
+                    ☰
+                </button>
+                <div className={`nav-buttons ${isMenuOpen ? 'open' : ''}`}>
+                    <button onClick={() => scrollToSection('about')}>About</button>
+                    <button onClick={() => scrollToSection('projects')}>Projects</button>
+                    <button onClick={() => scrollToSection('experience')}>Experience</button>
+                    <button onClick={() => scrollToSection('education')}>Education</button>
+                    <button onClick={() => scrollToSection('contact')}>Contact</button>
+                </div>
             </nav>
             <div className="home">
                 <div className="home-text">

@@ -56,16 +56,29 @@ body {
   color: #474747;
   display: flex;
   justify-content: center;
-  gap: 60px;
+  align-items: center;
+  padding: 1rem;
   margin-top: 1rem;
 }
-.nav button {
-  flex-direction: row;
-  transition: transform 0.2s ease;
+.nav .burger {
+  font-size: 2rem;
+  background: none;
   border: none;
   color: #474747;
+  cursor: pointer;
+  display: none;
 }
-.nav button:hover {
+.nav .nav-buttons {
+  display: flex;
+  gap: 40px;
+}
+.nav .nav-buttons button {
+  border: none;
+  background: none;
+  color: #474747;
+  transition: transform 0.2s ease;
+}
+.nav .nav-buttons button:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -475,6 +488,27 @@ footer .logo:hover {
     bottom: 1rem;
     right: 1rem;
     padding: 0.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FFF2D4;
+    margin-top: 0;
+  }
+  .nav .burger {
+    display: block;
+  }
+  .nav .nav-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+    gap: 20px;
+  }
+  .nav .nav-buttons.open {
+    display: flex;
   }
 }
 @media (max-width: 576px) {

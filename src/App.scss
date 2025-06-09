@@ -16,9 +16,9 @@ $spacing-md: 2rem;
 $font-base: 1rem;
 
 // Responsive Design
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
+$breakpoint-sm: 576px; // Mobile (small phones and up)
+$breakpoint-md: 768px; // Tablet (portrait)
+$breakpoint-lg: 1024px; // Small desktops or large tablets (landscape)
 
 @keyframes fadeInUp {
     from {
@@ -79,21 +79,38 @@ body {
     color: $text-color;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    align-items: center;
+    padding: 1rem;
     margin-top: 1rem;
 
-    button {
-        flex-direction: row;
-        transition: transform 0.2s ease;
+    .burger {
+        font-size: 2rem;
+        background: none;
         border: none;
         color: $text-color;
+        cursor: pointer;
+        display: none;
+    }
 
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
+    .nav-buttons {
+        display: flex;
+        gap: 40px;
+
+        button {
+            border: none;
+            background: none;
+            color: $text-color;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
         }
     }
+
 }
+
 
 .home {
     display: flex;
@@ -479,25 +496,9 @@ footer {
     }
 }
 
-//Responsive 
+//----------------------------- Responsive -----------------------------//
 
-
-//@media (max-width: 768px) {
-// .home {
-//     flex-direction: column;
-//     text-align: center;
-//   }
-
-//   .home-text, .profile-photo {
-//     max-width: 100%;
-//   }
-
-//   .profile-photo {
-//     margin-top: 20px;
-//   }
-// }
-
-// Tablets 
+// Large tablets
 @media (max-width: $breakpoint-lg) {
     .nav {
         flex-direction: column;
@@ -593,6 +594,32 @@ footer {
         bottom: 1rem;
         right: 1rem;
         padding: 0.6rem;
+    }
+}
+
+// Tablet
+@media (max-width: $breakpoint-md) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $color-yellow;
+        margin-top: 0;
+
+        .burger {
+            display: block; // Show burger icon
+        }
+
+        .nav-buttons {
+            display: none; // Hide by default
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 1rem;
+            gap: 20px;
+
+            &.open {
+                display: flex; // Only show when menu is open
+            }
+        }
     }
 }
 
