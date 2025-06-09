@@ -165,39 +165,39 @@ body {
   padding: 6rem 2rem;
   text-align: center;
 }
-.projects-heading {
+.projects .projects-heading {
   margin-bottom: 2rem;
 }
-.projects-grid {
+.projects .projects-grid {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
-.projects-item {
+.projects .projects-item {
   position: relative;
   width: 250px;
   height: 250px;
   overflow: hidden;
   border-radius: 6px;
 }
-.projects-item img {
+.projects .projects-item img {
   width: 100%;
   height: auto;
   display: block;
   filter: brightness(70%);
   cursor: pointer;
 }
-.projects-item img:hover {
+.projects .projects-item img:hover {
   filter: brightness(100%);
   transition: transform 0.4s ease;
 }
-.projects-item::after {
+.projects .projects-item::after {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-.projects-item .projects-label {
+.projects .projects-item .projects-label {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -436,7 +436,7 @@ footer .logo:hover {
   .about {
     flex-direction: column;
     text-align: center;
-    padding: 4rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
   .about .about-text {
     max-width: 100%;
@@ -525,13 +525,27 @@ footer .logo:hover {
   }
   h2 {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
   .read-more-button {
     font-size: 0.75rem;
     padding: 0.6rem 1.2rem;
   }
-  .projects-item {
-    width: 90%;
-    height: auto;
+  .projects,
+  .education,
+  .experience {
+    padding: 2rem;
+  }
+  .projects .projects-item {
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 200px;
+  }
+  .projects .projects-item::after {
+    padding-top: 0%;
+  }
+  .projects .projects-label {
+    font-size: 0.85rem;
   }
 }/*# sourceMappingURL=App.css.map */
