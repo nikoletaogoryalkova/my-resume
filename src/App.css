@@ -510,6 +510,13 @@ footer .logo:hover {
   .nav .nav-buttons.open {
     display: flex;
   }
+  .home .home-text .vector-pink {
+    top: -18%;
+    left: 8%;
+  }
+  .home .profile-photo {
+    max-width: 200px;
+  }
 }
 @media (max-width: 576px) {
   h1 {
