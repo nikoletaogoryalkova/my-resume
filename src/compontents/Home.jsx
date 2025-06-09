@@ -63,7 +63,15 @@ export default function Home() {
                     <p> development and have a passion for creating unique</p>
                     <p>  and innovative digital experiences.</p>
                     <p>  Let`s work together to bring your vision to life.</p>
-                    <button className="read-more-button">Read More</button>
+                    <button
+                        className="read-more-button"
+                        onClick={() => {
+                            const section = document.getElementById('about');
+                            section?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
+                        Read More
+                    </button>
                 </div>
                 <img className="profile-photo" src="/NikoletaOgoryalkova.jpeg" alt="Profile-photo" />
             </div>
