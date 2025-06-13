@@ -21,7 +21,7 @@ const projectInfo = {
     },
     3: {
         title: 'PROJECT 03',
-        images: ['Project3-1.png'],
+        images: ['/Project1.png'],
         description: 'Coming soon...',
         links: [],
     },
@@ -59,7 +59,7 @@ export default function ProjectDetails() {
                         </a>
                     ))}
                 </div>
-                
+
                 <Link to={`/projects/${nextId}`}>
                     Next Project &#8594;
                 </Link>
