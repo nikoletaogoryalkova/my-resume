@@ -37,9 +37,21 @@ export default function Navigation() {
     return (
         <>
             <nav className="nav">
-                <button className="burger" onClick={toggleMenu}>
-                    ☰
-                </button>
+                <div className='nav-wrapper'>
+                    <button className="burger" onClick={toggleMenu}>
+                        ☰
+                    </button>
+                    <div className={`logo-wrapper ${isMenuOpen ? 'hidden' : ''}`}>
+                        <Link to="/">
+                            <img
+                                className="logo"
+                                src="/Logo.svg"
+                                alt="logo"
+                            />
+                        </Link>
+                    </div>
+                </div>
+
                 <div className={`nav-buttons ${isMenuOpen ? "open" : ''}`}>
                     <Link to="/#about" className="nav-link">
                         About

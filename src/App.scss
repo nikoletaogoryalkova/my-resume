@@ -81,7 +81,7 @@ body {
 .nav {
     color: $text-color;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
     margin-top: 1rem;
@@ -120,7 +120,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 4rem 0;
+    padding: 14rem 0;
     height: 60vh;
     position: relative;
     overflow: hidden;
@@ -318,10 +318,11 @@ body {
         }
     }
 
-    .project-nav{
+    .project-nav {
         display: flex;
         justify-items: center;
         justify-content: space-evenly;
+
         >a {
             display: block;
             text-align: center;
@@ -331,7 +332,7 @@ body {
             text-decoration: none;
             margin-top: $spacing-md;
             transition: color 0.3s ease;
-    
+
             &:hover {
                 color: $text-color-hover;
                 // transform: scale(1.1);
@@ -539,17 +540,16 @@ footer {
             }
         }
     }
+}
 
-    .logo {
-        width: 35px;
-        cursor: pointer;
-        transition: transform 0.2s ease;
+.logo {
+    width: 35px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 
-        &:hover {
-            transform: scale(1.05);
-        }
+    &:hover {
+        transform: scale(1.05);
     }
-
 }
 
 .scroll-to-top {
@@ -695,6 +695,14 @@ footer {
             &.open {
                 display: flex;
             }
+        }
+
+        .nav-wrapper {
+            display: flex;
+        }
+
+        .logo-wrapper.hidden {
+            display: none;
         }
     }
 

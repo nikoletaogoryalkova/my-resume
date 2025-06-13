@@ -1,13 +1,12 @@
 export default function Footer() {
     return (
         <footer>
-            <div>
+            <div className="logo-wrapper">
                 <img
                     className="logo"
                     src="/Logo.svg"
                     alt="logo"
                     onClick={() => window.scrollTo({ top: 0 })}
-                    style={{ cursor: 'pointer' }}
                 />
             </div>
             <div className="footer-text">
