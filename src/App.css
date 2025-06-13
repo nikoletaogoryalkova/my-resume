@@ -215,7 +215,7 @@ body {
   margin: 3rem auto;
   padding: 2rem;
   color: #474747;
-  background-color: #fff9f9;
+  background-color: #fdf6f6;
   border-radius: 6px;
 }
 .projects-details h1 {
@@ -583,6 +583,7 @@ footer .github-icon img:hover {
     display: block;
   }
   .nav .nav-buttons {
+    transition: transform 0.3s ease-in-out;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -592,6 +593,9 @@ footer .github-icon img:hover {
   }
   .nav .nav-buttons.open {
     display: flex;
+  }
+  .nav .nav-buttons > a {
+    transition: all 0.3s ease-out;
   }
   .nav .nav-wrapper {
     display: flex;
