@@ -16,7 +16,7 @@ export default function Projects() {
         {
             id: 3,
             title: 'PROJECT 03',
-            image: '/Project1.png',
+            image: '/Project3.jpg',
         },
     ];
 
