@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 
 export default function Navigation() {
@@ -10,13 +11,13 @@ export default function Navigation() {
         setIsMenuOpen((prev) => !prev);
     };
 
-    const scrollToSection = (id) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView();
-        }
-        setIsMenuOpen(false);
-    };
+    // const scrollToSection = (id) => {
+    //     const section = document.getElementById(id);
+    //     if (section) {
+    //         section.scrollIntoView();
+    //     }
+    //     setIsMenuOpen(false);
+    // };
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0 });
@@ -40,21 +41,21 @@ export default function Navigation() {
                     ☰
                 </button>
                 <div className={`nav-buttons ${isMenuOpen ? "open" : ''}`}>
-                    <button onClick={() => scrollToSection('about')}>
+                    <Link to="/#about" className="nav-link">
                         About
-                    </button>
-                    <button onClick={() => scrollToSection('projects')}>
+                    </Link>
+                    <Link to="/#projects" className="nav-link">
                         Projects
-                    </button>
-                    <button onClick={() => scrollToSection('experience')}>
+                    </Link>
+                    <Link to="/#experience" className="nav-link">
                         Experience
-                    </button>
-                    <button onClick={() => scrollToSection('education')}>
+                    </Link>
+                    <Link to="/#education" className="nav-link">
                         Education
-                    </button>
-                    <button onClick={() => scrollToSection('contact')}>
+                    </Link>
+                    <Link to="/#contact" className="nav-link">
                         Contact
-                    </button>
+                    </Link>
                 </div>
             </nav>
             {showScroll && (

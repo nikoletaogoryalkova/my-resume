@@ -30,7 +30,9 @@ const projectInfo = {
 
 export default function ProjectDetails() {
     const { id } = useParams();
-    const project = projectInfo[id];
+    const projectId = parseInt(id, 10);
+    const project = projectInfo[projectId];
+    const nextId = projectId + 1 <= Object.keys(projectInfo).length ? projectId + 1 : 1; // Loop back to first if it's last
 
     if (!project) {
         return (
@@ -57,7 +59,10 @@ export default function ProjectDetails() {
                         </a>
                     ))}
                 </div>
-                <Link to="/">Next Project &#8594;</Link>
+                
+                <Link to={`/projects/${nextId}`}>
+                    Next Project &#8594;
+                </Link>
             </section>
         </>
     );

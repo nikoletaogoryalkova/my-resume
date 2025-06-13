@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import About from './About';
 import Projects from './Projects';
@@ -17,6 +18,18 @@ export default function Home() {
         }, 300);
         return () => clearTimeout(timeout);
     }, []);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const section = document.querySelector(location.hash);
+            if (section) {
+                section.scrollIntoView();
+            }
+        }
+    }, [location]);
+
 
 
 
