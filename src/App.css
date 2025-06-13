@@ -215,7 +215,7 @@ body {
   margin: 3rem auto;
   padding: 2rem;
   color: #474747;
-  background-color: #dfdfdf;
+  background-color: rgba(255, 234, 234, 0.8);
   border-radius: 6px;
 }
 .projects-details h1 {
