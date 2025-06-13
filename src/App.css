@@ -397,8 +397,8 @@ body {
 .contact .contact-form button {
   width: 100%;
   padding: 0.75rem;
-  background: transparent;
   border: 1px solid #474747;
+  color: #474747;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
