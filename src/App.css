@@ -215,7 +215,7 @@ body {
   margin: 3rem auto;
   padding: 2rem;
   color: #474747;
-  background-color: rgba(255, 234, 234, 0.8);
+  background-color: #fff9f9;
   border-radius: 6px;
 }
 .projects-details h1 {
@@ -608,7 +608,7 @@ footer .github-icon img:hover {
     max-height: 250px;
   }
   .projects-details {
-    padding: 0 1.5rem;
+    padding: 2rem;
   }
   .projects-details h1 {
     font-size: 2rem;
