@@ -259,8 +259,8 @@ body {
     margin: 3rem auto;
     padding: $spacing-md;
     color: $text-color;
-    // background-color: #ddd;
-    // border-radius: 6px;
+    background-color: #dfdfdf;
+    border-radius: 6px;
 
     h1 {
         font-size: 2.5rem;
@@ -292,6 +292,7 @@ body {
 
             &:hover {
                 transform: scale(1.05);
+                cursor: pointer;
             }
         }
     }
