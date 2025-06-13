@@ -264,17 +264,22 @@ body {
   background-color: #474747;
   color: #fff;
 }
-.projects-details > a {
+.projects-details .project-nav {
+  display: flex;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+.projects-details .project-nav > a {
   display: block;
   text-align: center;
   color: #474747;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-decoration: none;
   margin-top: 2rem;
   transition: color 0.3s ease;
 }
-.projects-details > a:hover {
+.projects-details .project-nav > a:hover {
   color: #7b7b7b;
 }
 

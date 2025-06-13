@@ -13,7 +13,7 @@ const projectInfo = {
     },
     2: {
         title: 'PROJECT 02',
-        images: ['/Project2.jpg', '/Project2-2.svg','/Project2-3.svg'],
+        images: ['/Project2.jpg', '/Project2-2.svg', '/Project2-3.svg'],
         description: 'A collection of creative projects that bring ideas to life — from posters and menus for restaurants and events to website designs. Each piece is crafted to communicate a message, reflect a unique style, and connect with its intended audience.',
         links: [
             // { label: 'GitHub', url: 'https://github.com/project2' },
@@ -33,6 +33,8 @@ export default function ProjectDetails() {
     const projectId = parseInt(id, 10);
     const project = projectInfo[projectId];
     const nextId = projectId + 1 <= Object.keys(projectInfo).length ? projectId + 1 : 1; // Loop back to first if it's last
+    const prevId = projectId - 1 >= 1 ? projectId - 1 : Object.keys(projectInfo).length;
+
 
     if (!project) {
         return (
@@ -60,9 +62,14 @@ export default function ProjectDetails() {
                     ))}
                 </div>
 
-                <Link to={`/projects/${nextId}`}>
-                    Next Project &#8594;
-                </Link>
+                <div className="project-nav">
+                    <Link to={`/projects/${prevId}`}>
+                        &#8592; Previous Project
+                    </Link>
+                    <Link to={`/projects/${nextId}`}>
+                        Next Project &#8594;
+                    </Link>
+                </div>
             </section>
         </>
     );
