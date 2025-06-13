@@ -13,7 +13,7 @@ const projectInfo = {
     },
     2: {
         title: 'PROJECT 02',
-        images: ['Project2.png', 'Project2-2.png'],
+        images: ['/Project2.jpg', '/Project2-2.png'],
         description: 'Banners, flyers',
         links: [
             // { label: 'GitHub', url: 'https://github.com/project2' },
