@@ -1,25 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Navigation from './components/Navigation'
+import Home from './components/Home'
+import ProjectDetails from './components/ProjectDetails'
+import Footer from './components/Footer'
+
 import './App.css'
-import About from './compontents/About'
-import Experience from './compontents/Experience'
-import Education from './compontents/Education'
-import Contact from './compontents/Contact'
-import Projects from './compontents/Projects'
-import Home from './compontents/Home'
-import Footer from './compontents/Footer'
 
 function App() {
-
     return (
-
-        <div className='App'>
-            <Home />
-            <About />
-            <Projects />
-            <Experience />
-            <Education />
-            <Contact />
+        <Router>
+            <Navigation />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="projects/:id" element={<ProjectDetails />} />
+            </Routes>
             <Footer />
-        </div>
+        </Router>
     )
 }
 
