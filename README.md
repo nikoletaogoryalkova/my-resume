@@ -4,7 +4,7 @@ This is my personal CV/Resume website. It includes my professional background, s
 ## 🛠️ Built With
 
 - HTML
-- SASS
+- CSS/SASS
 - JavaScript 
 - React
 
