@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 const projectInfo = {
     1: {
         title: 'PROJECT 01',
-        images: ['/Project1.png', '/Project1-2.svg'],
+        images: ['/Project1.svg', '/Project1-2.svg', '/Project1-3.svg', '/Project1-4.png'],
         description: 'Built a sleek, responsive website for Paradise View, a beautiful villa complex in Sarnitsa, Bulgaria. Showcased stunning panoramic views and amenities with smooth animations and clear navigation. Focused on creating a seamless experience for visitors on any device, combining clean design with front-end best practices.',
         links: [
             { label: 'Live', url: 'https://paradiseview.bg/' },
@@ -13,7 +13,7 @@ const projectInfo = {
     },
     2: {
         title: 'PROJECT 02',
-        images: ['/Project2.jpg', '/Project2-2.svg', '/Project2-3.svg'],
+        images: ['/Project2.jpg', '/Project2-2.svg', '/Project2-3.svg','/Project2-4.svg'],
         description: 'A collection of creative projects that bring ideas to life — from posters and menus for restaurants and events to website designs. Each piece is crafted to communicate a message, reflect a unique style, and connect with its intended audience.',
         links: [
             // { label: 'GitHub', url: 'https://github.com/project2' },
@@ -64,10 +64,10 @@ export default function ProjectDetails() {
 
                 <div className="project-nav">
                     <Link to={`/projects/${prevId}`}>
-                        &#8592; Previous Project
+                        &#8592; Prev
                     </Link>
                     <Link to={`/projects/${nextId}`}>
-                        Next Project &#8594;
+                        Next  &#8594;
                     </Link>
                 </div>
             </section>

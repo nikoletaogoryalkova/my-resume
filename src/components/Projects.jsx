@@ -6,7 +6,7 @@ export default function Projects() {
         {
             id: 1,
             title: 'PROJECT 01',
-            image: '/Project1.png',
+            image: '/Project1-4.png',
         },
         {
             id: 2,

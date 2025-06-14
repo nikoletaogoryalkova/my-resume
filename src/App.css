@@ -493,8 +493,8 @@ footer .github-icon img:hover {
 @media (max-width: 1024px) {
   .nav {
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
   }
   .home {
     flex-direction: column;
@@ -610,6 +610,9 @@ footer .github-icon img:hover {
   .home .profile-photo {
     max-width: 250px;
     max-height: 250px;
+  }
+  .home .home-text .read-more-button {
+    margin-top: 1rem;
   }
   .projects-details {
     padding: 2rem;
