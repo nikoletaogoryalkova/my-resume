@@ -103,6 +103,9 @@ body {
   max-width: 50%;
   padding: 20px;
 }
+.home .home-text h1 {
+  margin-bottom: 1rem;
+}
 .home .home-text h1,
 .home .home-text p {
   position: relative;

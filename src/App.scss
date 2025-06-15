@@ -115,7 +115,6 @@ body {
 
 }
 
-
 .home {
     display: flex;
     align-items: center;
@@ -131,6 +130,10 @@ body {
         z-index: 2;
         max-width: 50%;
         padding: 20px;
+
+        h1{
+            margin-bottom: 1rem;
+        }
 
         h1,
         p {
@@ -162,21 +165,6 @@ body {
         border-radius: 50%;
     }
 }
-
-// .read-more-button {
-//     border: 1px solid $text-color;
-//     padding: 10px 20px;
-//     margin-top: $spacing-md;
-//     cursor: pointer;
-//     color: $text-color;
-//     font-size: 0.8rem;
-//     transition: all 0.3s ease;
-
-//     &:hover {
-//         background-color: $text-color;
-//         color: $text-color-white;
-//     }
-// }
 
 .about {
     display: flex;
@@ -764,10 +752,6 @@ footer {
             max-width: 250px;
             max-height: 250px;
         }
-
-        // .home-text .read-more-button {
-        //     margin-top: 1rem;
-        // }
     }
 
     .projects-details {
@@ -796,12 +780,6 @@ footer {
         font-size: 1.5rem;
         margin-bottom: $spacing-md;
     }
-
-    // .read-more-button {
-    //     font-size: 0.75rem;
-    //     padding: 0.6rem 1.2rem;
-    // }
-
 
     .projects,
     .education,
