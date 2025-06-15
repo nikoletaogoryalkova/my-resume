@@ -614,6 +614,7 @@ footer .github-icon img:hover {
     align-items: flex-start;
     background-color: #FFF2D4;
     margin-top: 0;
+    padding: 0.6rem;
   }
   .nav .burger {
     display: block;
@@ -651,7 +652,7 @@ footer .github-icon img:hover {
     margin-top: 1rem;
   }
   .projects-details {
-    padding: 2rem;
+    max-width: 80%;
   }
   .projects-details h1 {
     font-size: 2rem;

@@ -718,6 +718,7 @@ footer {
         align-items: flex-start;
         background-color: $color-yellow;
         margin-top: 0;
+        padding: 0.6rem;
 
         .burger {
             display: block;
@@ -769,7 +770,7 @@ footer {
     }
 
     .projects-details {
-        padding: $spacing-md;
+       max-width: 80%;
 
         h1 {
             font-size: 2rem;
