@@ -211,8 +211,9 @@ body {
 }
 
 .projects-details {
-  max-width: 50%;
+  max-width: 47%;
   margin: 3rem auto;
+  padding: 2rem;
   color: #474747;
   background-color: #fdf6f6;
   border-radius: 6px;
