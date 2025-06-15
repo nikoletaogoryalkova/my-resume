@@ -596,6 +596,7 @@ footer .github-icon img:hover {
   footer {
     flex-direction: column;
     text-align: center;
+    flex-direction: column-reverse;
     gap: 1rem;
   }
   footer .linkedin-mail-icon,

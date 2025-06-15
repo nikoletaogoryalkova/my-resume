@@ -696,6 +696,7 @@ footer {
     footer {
         flex-direction: column;
         text-align: center;
+        flex-direction: column-reverse;
         gap: 1rem;
 
         .linkedin-mail-icon,
