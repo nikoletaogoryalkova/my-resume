@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 const projectInfo = {
     1: {
         title: 'PROJECT 01',
-        images: ['/Project1.svg', '/Project1-2.svg', '/Project1-3.svg', '/Project1-4.png'],
+        images: ['/Project1-1.jpg', '/Project1-3.jpg', '/Project1-2.jpg', '/Project1-4.jpg'],
         description: 'Built a sleek, responsive website for Paradise View, a beautiful villa complex in Sarnitsa, Bulgaria. Showcased stunning panoramic views and amenities with smooth animations and clear navigation. Focused on creating a seamless experience for visitors on any device, combining clean design with front-end best practices.',
         links: [
             { label: 'Live', url: 'https://paradiseview.bg/' },

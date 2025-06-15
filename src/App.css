@@ -211,7 +211,7 @@ body {
 }
 
 .projects-details {
-  max-width: 900px;
+  max-width: 600px;
   margin: 3rem auto;
   padding: 2rem;
   color: #474747;
@@ -225,7 +225,7 @@ body {
   text-align: center;
 }
 .projects-details p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
   text-align: justify;
@@ -239,7 +239,8 @@ body {
 }
 .projects-details .project-images img {
   max-width: 100%;
-  width: 45%;
+  width: 48%;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -255,13 +256,16 @@ body {
   margin-bottom: 3rem;
 }
 .projects-details .project-links a {
-  padding: 0.6rem 1.4rem;
+  padding: 0.3rem 1rem;
   border: 2px solid #474747;
-  border-radius: 6px;
+  border-radius: 3px;
   color: #474747;
-  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+.projects-details .project-links a:first-child:hover {
+  background-color: rgb(250, 133, 133);
+  border: 2px solid rgb(250, 133, 133);
 }
 .projects-details .project-links a:hover {
   background-color: #474747;
@@ -284,6 +288,7 @@ body {
 }
 .projects-details .project-nav > a:hover {
   color: #7b7b7b;
+  transform: scale(1.1);
 }
 
 .experience {
@@ -658,6 +663,9 @@ footer .github-icon img:hover {
   }
   .projects-details p {
     font-size: 1rem;
+  }
+  .projects-details .project-images img {
+    width: 100%;
   }
   .projects-details .project-links {
     flex-direction: column;
