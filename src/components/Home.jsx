@@ -9,8 +9,6 @@ import Contact from './Contact';
 
 export default function Home() {
     const [animate, setAnimate] = useState(false);
-    // const [showScroll, setShowScroll] = useState(false);
-    // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -32,48 +30,8 @@ export default function Home() {
 
 
 
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setShowScroll(window.scrollY > 300); // Show after scrolling 300px
-    //     };
-
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, []);
-
-
-    // const toggleMenu = () => {
-    //     setIsMenuOpen(prev => !prev);
-    // };
-
     return (
         <>
-            {/* <nav className="nav">
-                <button className="burger" onClick={toggleMenu}>
-                    ☰
-                </button>
-                <div className={`nav-buttons ${isMenuOpen ? 'open' : ''}`}>
-                    <button onClick={() => scrollToSection('about')}>
-                        About
-                    </button>
-                    <button onClick={() => scrollToSection('projects')}>
-                        Projects
-                    </button>
-                    <button onClick={() => scrollToSection('experience')}>
-                        Experience
-                    </button>
-                    <button onClick={() => scrollToSection('education')}>
-                        Education
-                    </button>
-                    <button onClick={() => scrollToSection('contact')}>
-                        Contact
-                    </button>
-                </div>
-            </nav> */}
-
-
-
             <div id="home" className="home">
                 <div className="home-text">
                     <img
@@ -86,7 +44,7 @@ export default function Home() {
                     <p> development and have a passion for creating unique</p>
                     <p>  and innovative digital experiences.</p>
                     <p>  Let`s work together to bring your vision to life.</p>
-                    <button
+                    {/* <button
                         className="read-more-button"
                         onClick={() => {
                             const section = document.getElementById('about');
@@ -94,7 +52,7 @@ export default function Home() {
                         }}
                     >
                         Read More
-                    </button>
+                    </button> */}
                 </div>
                 <img className="profile-photo" src="/NikoletaOgoryalkova.jpeg" alt="Profile-photo" />
             </div>
@@ -104,17 +62,6 @@ export default function Home() {
             <Experience />
             <Education />
             <Contact />
-
-            
-            {/* {showScroll && (
-                <button
-                    onClick={scrollToTop}
-                    className="scroll-to-top"
-                    aria-label="Scroll to top"
-                >
-                    <ArrowUp size={24} />
-                </button>
-            )} */}
         </>
     );
 }

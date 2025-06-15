@@ -133,8 +133,7 @@ body {
         padding: 20px;
 
         h1,
-        p,
-        .read-more-button {
+        p {
             position: relative;
             z-index: 3;
         }
@@ -164,20 +163,20 @@ body {
     }
 }
 
-.read-more-button {
-    border: 1px solid $text-color;
-    padding: 10px 20px;
-    margin-top: $spacing-md;
-    cursor: pointer;
-    color: $text-color;
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
+// .read-more-button {
+//     border: 1px solid $text-color;
+//     padding: 10px 20px;
+//     margin-top: $spacing-md;
+//     cursor: pointer;
+//     color: $text-color;
+//     font-size: 0.8rem;
+//     transition: all 0.3s ease;
 
-    &:hover {
-        background-color: $text-color;
-        color: $text-color-white;
-    }
-}
+//     &:hover {
+//         background-color: $text-color;
+//         color: $text-color-white;
+//     }
+// }
 
 .about {
     display: flex;
@@ -640,7 +639,7 @@ footer {
 
         .profile-photo {
             max-width: 250px;
-            margin-top: 2rem;
+            margin-top: 4rem;
         }
     }
 
@@ -766,9 +765,9 @@ footer {
             max-height: 250px;
         }
 
-        .home-text .read-more-button {
-            margin-top: 1rem;
-        }
+        // .home-text .read-more-button {
+        //     margin-top: 1rem;
+        // }
     }
 
     .projects-details {
@@ -798,10 +797,10 @@ footer {
         margin-bottom: $spacing-md;
     }
 
-    .read-more-button {
-        font-size: 0.75rem;
-        padding: 0.6rem 1.2rem;
-    }
+    // .read-more-button {
+    //     font-size: 0.75rem;
+    //     padding: 0.6rem 1.2rem;
+    // }
 
 
     .projects,

@@ -104,8 +104,7 @@ body {
   padding: 20px;
 }
 .home .home-text h1,
-.home .home-text p,
-.home .home-text .read-more-button {
+.home .home-text p {
   position: relative;
   z-index: 3;
 }
@@ -128,20 +127,6 @@ body {
   max-width: 400px;
   height: auto;
   border-radius: 50%;
-}
-
-.read-more-button {
-  border: 1px solid #474747;
-  padding: 10px 20px;
-  margin-top: 2rem;
-  cursor: pointer;
-  color: #474747;
-  font-size: 0.8rem;
-  transition: all 0.3s ease;
-}
-.read-more-button:hover {
-  background-color: #474747;
-  color: #fff;
 }
 
 .about {
@@ -550,7 +535,7 @@ footer .github-icon img:hover {
   }
   .home .profile-photo {
     max-width: 250px;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   .about {
     flex-direction: column;
@@ -650,9 +635,6 @@ footer .github-icon img:hover {
     max-width: 250px;
     max-height: 250px;
   }
-  .home .home-text .read-more-button {
-    margin-top: 1rem;
-  }
   .projects-details {
     max-width: 80%;
   }
@@ -670,10 +652,6 @@ footer .github-icon img:hover {
   h2 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-  }
-  .read-more-button {
-    font-size: 0.75rem;
-    padding: 0.6rem 1.2rem;
   }
   .projects,
   .education,
