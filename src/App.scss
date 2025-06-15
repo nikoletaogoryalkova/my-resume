@@ -219,8 +219,8 @@ body {
 
     .projects-item {
         position: relative;
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
         overflow: hidden;
         border-radius: 6px;
 
@@ -578,6 +578,39 @@ footer {
     }
 }
 
+// Page NotFound
+.not-found {
+    background: $color-pink;
+    text-align: center;
+    padding: $spacing-md;
+}
+
+.not-found h1 {
+    font-size: 4rem;
+    color: $text-color;
+    margin-bottom: 20px;
+}
+
+.not-found p {
+    color: $text-color;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.not-found a {
+    color: $text-color;
+    text-decoration: none;
+    border: 2px solid $text-color-hover;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.not-found a:hover {
+    background: $text-color-hover;
+    color: #fff;
+}
+
 //----------------------------- Responsive -----------------------------//
 
 // Large tablets
@@ -780,7 +813,7 @@ footer {
         .projects-item {
             flex-direction: column;
             align-items: center;
-            width: 70%;
+            width: 90%;
             height: 200px;
 
             &::after {
@@ -801,6 +834,7 @@ footer {
         p {
             font-size: 1rem;
         }
+
         .project-images img {
             width: 100%;
         }

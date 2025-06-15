@@ -13,7 +13,7 @@ const projectInfo = {
     },
     2: {
         title: 'PROJECT 02',
-        images: ['/Project2.jpg', '/Project2-2.svg', '/Project2-3.svg', '/Project2-4.svg'],
+        images: ['/Project2-1.jpg', '/Project2-2.jpg', '/Project2-3.svg', '/Project2-4.svg'],
         description: 'A collection of creative projects that bring ideas to life — from posters and menus for restaurants and events to website designs. Each piece is crafted to communicate a message, reflect a unique style, and connect with its intended audience.',
         links: [
             // { label: 'GitHub', url: 'https://github.com/project2' },
