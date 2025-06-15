@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import { useState } from 'react';
 
 
 const projectInfo = {
@@ -16,7 +17,7 @@ const projectInfo = {
         images: ['/Project2-1.jpg', '/Project2-2.jpg', '/Project2-3.jpg', '/Project2-4.jpg'],
         description: 'A collection of creative projects that bring ideas to life — from posters and menus for restaurants and events to website designs. Each piece is crafted to communicate a message, reflect a unique style, and connect with its intended audience.',
         links: [
-             { label: 'Live', url: 'https://www.behance.net/nikoletaogoryalkova' },
+            { label: 'Live', url: 'https://www.behance.net/nikoletaogoryalkova' },
         ],
     },
     3: {
@@ -35,6 +36,8 @@ export default function ProjectDetails() {
     const nextId = projectId + 1 <= Object.keys(projectInfo).length ? projectId + 1 : 1; // Loop back to first if it's last
     const prevId = projectId - 1 >= 1 ? projectId - 1 : Object.keys(projectInfo).length;
 
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     if (!project) {
         return (
@@ -44,6 +47,23 @@ export default function ProjectDetails() {
             </>
         );
     }
+
+    const handleClick = (index) => {
+        setCurrentIndex(index);
+        setIsOpen(true);
+    };
+    const handleClose = () => {
+        setIsOpen(false);
+    };
+    const handleNext = (e) => {
+        e.stopPropagation();
+        setCurrentIndex((currentIndex + 1) % project.images.length);
+    };
+    const handlePrev = (e) => {
+        e.stopPropagation();
+        setCurrentIndex((currentIndex - 1 + project.images.length) % project.images.length);
+    };
+
     return (
         <>
             <section className='projects-details'>
@@ -55,6 +75,7 @@ export default function ProjectDetails() {
                             key={index}
                             src={img}
                             alt={`${project.title} screenshot ${index + 1}`}
+                            onClick={() => handleClick(index)}
                         />
                     ))}
                 </div>
@@ -69,6 +90,18 @@ export default function ProjectDetails() {
                         </a>
                     ))}
                 </div>
+                {isOpen && (
+                    <div className="modal" onClick={handleClose}>
+                        <span className="close" onClick={(e) => { e.stopPropagation(); handleClose(); }}>✕</span>
+                        <span className="prev" onClick={handlePrev}>
+                            ❮
+                        </span>
+                        <img src={project.images[currentIndex]} alt="Fullscreen view" />
+                        <span className="next" onClick={handleNext}>
+                            ❯
+                        </span>
+                    </div>
+                )}
 
                 <div className="project-nav">
                     <Link to={`/projects/${prevId}`}>
