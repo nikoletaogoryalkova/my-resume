@@ -53,19 +53,19 @@ export default function Navigation() {
                 </div>
 
                 <div className={`nav-buttons ${isMenuOpen ? "open" : ''}`}>
-                    <Link to="/#about" className="nav-link">
+                    <Link to="/#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                         About
                     </Link>
-                    <Link to="/#projects" className="nav-link">
+                    <Link to="/#projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                         Projects
                     </Link>
-                    <Link to="/#experience" className="nav-link">
+                    <Link to="/#experience" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                         Experience
                     </Link>
-                    <Link to="/#education" className="nav-link">
+                    <Link to="/#education" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                         Education
                     </Link>
-                    <Link to="/#contact" className="nav-link">
+                    <Link to="/#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                         Contact
                     </Link>
                 </div>
