@@ -772,7 +772,7 @@ footer {
     }
 
     .projects-details {
-       max-width: 80%;
+        max-width: 80%;
 
         h1 {
             font-size: 2rem;
@@ -856,56 +856,39 @@ footer {
 
 
 .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background:rgba(0,0,0,0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-    cursor: zoom-out;
+}
 
-    img {
-        max-width: 90%;
-        max-height: 90%;
-        box-shadow: 0 0 30px black;
-        border-radius: 6px;
-        cursor: default;
-    }
-  
-    .close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 2rem;
-        color: #fff;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 1001;
-    }
-  
-    .prev, .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #fff;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 1001;
-        user-select: none;
-    }
-  
-    .prev {
-        left: 30px;
-    }
-  
-    .next {
-        right: 30px;
-    }
+.modal .close,
+.modal .prev,
+.modal .next {
+    position: absolute;
+    color: $text-color;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal .close {
+    top: 20px;
+    right: 20px
+}
+
+.modal .prev {
+    left: 20px;
+    top: 50%
+}
+
+.modal .next {
+    right: 20px;
+    top: 50%
 }
