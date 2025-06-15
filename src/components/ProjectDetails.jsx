@@ -13,7 +13,7 @@ const projectInfo = {
     },
     2: {
         title: 'PROJECT 02',
-        images: ['/Project2.jpg', '/Project2-2.svg', '/Project2-3.svg','/Project2-4.svg'],
+        images: ['/Project2.jpg', '/Project2-2.svg', '/Project2-3.svg', '/Project2-4.svg'],
         description: 'A collection of creative projects that bring ideas to life — from posters and menus for restaurants and events to website designs. Each piece is crafted to communicate a message, reflect a unique style, and connect with its intended audience.',
         links: [
             // { label: 'GitHub', url: 'https://github.com/project2' },
@@ -51,12 +51,20 @@ export default function ProjectDetails() {
                 <p>{project.description}</p>
                 <div className="project-images">
                     {project.images.map((img, index) => (
-                        <img key={index} src={img} alt={`${project.title} screenshot ${index + 1}`} />
+                        <img
+                            key={index}
+                            src={img}
+                            alt={`${project.title} screenshot ${index + 1}`}
+                        />
                     ))}
                 </div>
                 <div className="project-links">
                     {project.links.map((link, idx) => (
-                        <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer">
+                        <a
+                            key={idx}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer">
                             {link.label}
                         </a>
                     ))}
