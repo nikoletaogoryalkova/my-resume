@@ -501,7 +501,7 @@ body {
   border: none;
   background-color: #fff;
   border-radius: 0;
-  border-bottom: 0.5px solid #474747;
+  border-bottom: 0.3px solid #474747;
 }
 
 footer {
@@ -735,14 +735,6 @@ footer .github-icon img:hover {
   }
   .contact .contact-form .form-group input[type=tel] {
     width: 90%;
-  }
-  .react-tel-input .flag-dropdown,
-  .react-tel-input .flag-dropdown.open,
-  .react-tel-input .selected-flag,
-  .react-tel-input .selected-flag.open,
-  .react-tel-input .flag-dropdown:hover,
-  .react-tel-input .flag-dropdown:focus {
-    border-bottom: 0.7px solid #474747;
   }
 }
 @media (max-width: 576px) {
