@@ -278,7 +278,8 @@ body {
   color: #7b7b7b;
   transform: scale(1.1);
 }
-.projects-details .modal {
+
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -291,14 +292,16 @@ body {
   z-index: 1000;
   cursor: zoom-out;
 }
-.projects-details .modal img {
+.modal img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 90vh;
   box-shadow: 0 0 30px black;
   border-radius: 6px;
   cursor: default;
+  display: block;
+  margin: 0 auto;
 }
-.projects-details .modal .close {
+.modal .close {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -309,26 +312,32 @@ body {
   cursor: pointer;
   z-index: 1001;
 }
-.projects-details .modal .prev,
-.projects-details .modal .next {
+.modal .swiper-button-prev,
+.modal .swiper-button-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
-  font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
   z-index: 1001;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.projects-details .modal .prev {
+.modal .swiper-button-prev {
   left: 30px;
 }
-.projects-details .modal .next {
+.modal .swiper-button-next {
   right: 30px;
+}
+.modal .swiper-pagination {
+  bottom: 20px !important;
+}
+.modal .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.modal .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #474747;
 }
 
 .experience {
@@ -728,6 +737,12 @@ footer .github-icon img:hover {
   }
   .projects-details .project-images img {
     width: 100%;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after,
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 1rem;
   }
   .experience .experience-text p {
     line-height: 1.5;

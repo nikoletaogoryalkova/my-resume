@@ -332,30 +332,32 @@ body {
             }
         }
     }
+}
 
-    .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        cursor: zoom-out;
-    }
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
 
-    .modal img {
+    img {
         max-width: 90%;
-        max-height: 90%;
+        max-height: 90vh;
         box-shadow: 0 0 30px black;
         border-radius: 6px;
         cursor: default;
+        display: block;
+        margin: 0 auto;
     }
 
-    .modal .close {
+    .close {
         position: absolute;
         top: 20px;
         right: 30px;
@@ -367,30 +369,44 @@ body {
         z-index: 1001;
     }
 
-    .modal .prev,
-    .modal .next {
+    .swiper-button-prev,
+    .swiper-button-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         color: #fff;
-        font-size: 2rem;
         background: none;
         border: none;
         cursor: pointer;
         z-index: 1001;
-        -webkit-user-select: none;
-        -moz-user-select: none;
         user-select: none;
     }
 
-    .modal .prev {
+    .swiper-button-prev {
         left: 30px;
     }
 
-    .modal .next {
+    .swiper-button-next {
         right: 30px;
     }
+
+    .swiper-pagination {
+        bottom: 20px !important;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        background-color: $text-color;
+    }
+
+    // .swiper-button-next:after,
+    // .swiper-button-prev:after,
+    // .swiper-button-prev:after,
+    // .swiper-button-next:after {
+    //     font-size: 2rem;
+    // }
 }
+
 
 .experience {
     display: flex;
@@ -857,6 +873,13 @@ footer {
                 width: 100%;
             }
         }
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after,
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 1rem;
     }
 
     .experience .experience-text p {

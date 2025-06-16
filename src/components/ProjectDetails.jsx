@@ -1,6 +1,13 @@
 import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 
 const projectInfo = {
     1: {
@@ -33,14 +40,14 @@ export default function ProjectDetails() {
     const { id } = useParams();
     const projectId = parseInt(id, 10);
     const project = projectInfo[projectId];
-    const nextId = projectId + 1 <= Object.keys(projectInfo).length ? projectId + 1 : 1; // Loop back to first if it's last
+    const nextId = projectId + 1 <= Object.keys(projectInfo).length ? projectId + 1 : 1;
     const prevId = projectId - 1 >= 1 ? projectId - 1 : Object.keys(projectInfo).length;
 
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const [touchStart, setTouchStart] = useState(0);
-    const [touchEnd, setTouchEnd] = useState(0);
+    // const [touchStart, setTouchStart] = useState(0);
+    // const [touchEnd, setTouchEnd] = useState(0);
 
     if (!project) {
         return (
@@ -58,30 +65,29 @@ export default function ProjectDetails() {
     const handleClose = () => {
         setIsOpen(false);
     };
-    const handleNext = (e) => {
-        e.stopPropagation();
-        setCurrentIndex((currentIndex + 1) % project.images.length);
-    };
-    const handlePrev = (e) => {
-        e.stopPropagation();
-        setCurrentIndex((currentIndex - 1 + project.images.length) % project.images.length);
-    };
+    // const handleNext = (e) => {
+    //     e.stopPropagation();
+    //     setCurrentIndex((currentIndex + 1) % project.images.length);
+    // };
+    // const handlePrev = (e) => {
+    //     e.stopPropagation();
+    //     setCurrentIndex((currentIndex - 1 + project.images.length) % project.images.length);
+    // };
 
-    const handleTouchStart = (e) => {
-        e.stopPropagation();
-        setTouchStart(e.touches[0].clientX);
-    };
+    // const handleTouchStart = (e) => {
+    //     e.stopPropagation();
+    //     setTouchStart(e.touches[0].clientX);
+    // };
 
-    const handleTouchEnd = (e) => {
-        e.stopPropagation();
-        setTouchEnd(e.changedTouches[0].clientX);
-        if (touchStart - touchEnd > 50) { // swipe left
-            handleNext(e);
-        }
-        if (touchEnd - touchStart > 50) { // swipe right
-            handlePrev(e);
-        }
-    };
+    // const handleTouchEnd = (e) => {
+    //     setTouchEnd(e.changedTouches[0].clientX);
+    //     if (touchStart - touchEnd > 50) {
+    //         handleNext(e);
+    //     }
+    //     if (touchEnd - touchStart > 50) {
+    //         handlePrev(e);
+    //     }
+    // };
 
     return (
         <>
@@ -116,22 +122,29 @@ export default function ProjectDetails() {
                             onClick={(e) => {
                                 e.stopPropagation();
                                 handleClose();
-                            }}>✕</span>
-                        <span
-                            className="prev"
-                            onClick={handlePrev}
+                            }}
                         >
-                            ❮
+                            ✕
                         </span>
-                        <img
-                            src={project.images[currentIndex]}
-                            alt="Fullscreen view"
-                            onTouchStart={handleTouchStart}
-                            onTouchEnd={handleTouchEnd}
-                        />
-                        <span className="next" onClick={handleNext}>
-                            ❯
-                        </span>
+
+                        <Swiper
+                            modules={[Navigation, Pagination, Autoplay]}
+                            spaceBetween={30}
+                            centeredSlides={true}
+                            autoplay={{ delay: 4500, disableOnInteraction: false }}
+                            pagination={{ clickable: true }}
+                            navigation={{}}
+
+                            initialSlide={currentIndex}
+                            onClick={(e) => e.stopPropagation()}
+                            className="mySwiper"
+                        >
+                            {project.images.map((img, idx) => (
+                                <SwiperSlide key={idx}>
+                                    <img src={img} alt={`slide ${idx + 1}`} />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 )}
 
