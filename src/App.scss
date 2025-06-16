@@ -346,7 +346,7 @@ body {
         z-index: 1000;
         cursor: zoom-out;
     }
-    
+
     .modal img {
         max-width: 90%;
         max-height: 90%;
@@ -354,7 +354,7 @@ body {
         border-radius: 6px;
         cursor: default;
     }
-    
+
     .modal .close {
         position: absolute;
         top: 20px;
@@ -366,7 +366,7 @@ body {
         cursor: pointer;
         z-index: 1001;
     }
-    
+
     .modal .prev,
     .modal .next {
         position: absolute;
@@ -382,11 +382,11 @@ body {
         -moz-user-select: none;
         user-select: none;
     }
-    
+
     .modal .prev {
         left: 30px;
     }
-    
+
     .modal .next {
         right: 30px;
     }
@@ -541,6 +541,26 @@ body {
                 color: $text-color-white;
             }
         }
+    }
+}
+
+.contact .contact-form .form-group>input,
+.contact .contact-form .form-group>textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    padding: 0.5rem;
+    font-size: $font-base;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+
+    &:focus {
+        border-bottom: 1px solid $text-color;
     }
 }
 
@@ -724,10 +744,10 @@ footer {
     }
 
     .contact {
-        padding: 3rem 1rem;
+        padding: 1rem;
 
         .contact-form {
-            padding: 2rem 1rem;
+            padding: $spacing-md 1rem;
         }
 
         .form-row {
@@ -822,7 +842,7 @@ footer {
     .about {
         .about-text p {
             line-height: 1.4;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
     }
 
@@ -854,10 +874,7 @@ footer {
 
     h2 {
         font-size: 1.5rem;
-    }
-
-    .about h2 {
-        margin-bottom: $spacing-md;
+        margin-bottom: 1rem;
     }
 
     .projects,
@@ -909,5 +926,3 @@ footer {
         }
     }
 }
-
-

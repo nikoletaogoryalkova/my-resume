@@ -459,6 +459,27 @@ body {
   color: #fff;
 }
 
+.contact .contact-form .form-group > input,
+.contact .contact-form .form-group > textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #474747;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  outline: none;
+}
+.contact .contact-form .form-group > input:focus,
+.contact .contact-form .form-group > textarea:focus {
+  border-bottom: 1px solid #474747;
+}
+
 .contact .contact-form .form-group input[type=tel] {
   border-radius: 0;
   margin-left: 2rem;
@@ -623,7 +644,7 @@ footer .github-icon img:hover {
     text-align: left;
   }
   .contact {
-    padding: 3rem 1rem;
+    padding: 1rem;
   }
   .contact .contact-form {
     padding: 2rem 1rem;
@@ -698,7 +719,7 @@ footer .github-icon img:hover {
   }
   .about .about-text p {
     line-height: 1.4;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
   }
   .projects-details {
     max-width: 80%;
@@ -719,9 +740,7 @@ footer .github-icon img:hover {
   }
   h2 {
     font-size: 1.5rem;
-  }
-  .about h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .projects,
   .education,
