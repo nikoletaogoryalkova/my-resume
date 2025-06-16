@@ -39,6 +39,9 @@ export default function ProjectDetails() {
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
+
     if (!project) {
         return (
             <>
@@ -62,6 +65,22 @@ export default function ProjectDetails() {
     const handlePrev = (e) => {
         e.stopPropagation();
         setCurrentIndex((currentIndex - 1 + project.images.length) % project.images.length);
+    };
+
+    const handleTouchStart = (e) => {
+        e.stopPropagation();
+        setTouchStart(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = (e) => {
+        e.stopPropagation();
+        setTouchEnd(e.changedTouches[0].clientX);
+        if (touchStart - touchEnd > 50) { // swipe left
+            handleNext(e);
+        }
+        if (touchEnd - touchStart > 50) { // swipe right
+            handlePrev(e);
+        }
     };
 
     return (
@@ -92,11 +111,24 @@ export default function ProjectDetails() {
                 </div>
                 {isOpen && (
                     <div className="modal" onClick={handleClose}>
-                        <span className="close" onClick={(e) => { e.stopPropagation(); handleClose(); }}>✕</span>
-                        <span className="prev" onClick={handlePrev}>
+                        <span
+                            className="close"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handleClose();
+                            }}>✕</span>
+                        <span
+                            className="prev"
+                            onClick={handlePrev}
+                        >
                             ❮
                         </span>
-                        <img src={project.images[currentIndex]} alt="Fullscreen view" />
+                        <img
+                            src={project.images[currentIndex]}
+                            alt="Fullscreen view"
+                            onTouchStart={handleTouchStart}
+                            onTouchEnd={handleTouchEnd}
+                        />
                         <span className="next" onClick={handleNext}>
                             ❯
                         </span>
