@@ -819,6 +819,13 @@ footer {
         }
     }
 
+    .about {
+        .about-text p {
+            line-height: 1.4;
+            margin-bottom: 0.8rem;
+        }
+    }
+
     .projects-details {
         max-width: 80%;
 
@@ -831,6 +838,10 @@ footer {
                 width: 100%;
             }
         }
+    }
+
+    .experience .experience-text p {
+        line-height: 1.5;
     }
 
 }

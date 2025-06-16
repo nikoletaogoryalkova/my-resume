@@ -696,6 +696,10 @@ footer .github-icon img:hover {
     max-width: 250px;
     max-height: 250px;
   }
+  .about .about-text p {
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+  }
   .projects-details {
     max-width: 80%;
   }
@@ -704,6 +708,9 @@ footer .github-icon img:hover {
   }
   .projects-details .project-images img {
     width: 100%;
+  }
+  .experience .experience-text p {
+    line-height: 1.5;
   }
 }
 @media (max-width: 576px) {
