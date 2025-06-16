@@ -113,11 +113,11 @@ body {
 }
 .home .home-text .vector-pink {
   position: absolute;
-  top: -50%;
-  left: -24%;
+  top: -67%;
+  left: -3%;
   max-width: none;
   z-index: 1;
-  width: 75%;
+  width: 70%;
   pointer-events: none;
   transition: transform 1s ease-out, opacity 1s ease-out;
   transform: translateX(-100%);
@@ -135,7 +135,7 @@ body {
 .about {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 6rem 2rem;
   z-index: 1;
   background-color: #FFF2D4;
@@ -282,10 +282,9 @@ body {
 .experience {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
+  justify-content: space-around;
+  padding: 2rem 0;
   background-color: #FFDFF7;
-  padding: 2rem;
 }
 .experience .experience-text p {
   line-height: 1.7;
@@ -297,8 +296,8 @@ body {
 .education {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 6rem 2rem;
+  justify-content: space-around;
+  padding: 2rem;
 }
 .education .education-text {
   display: flex;
@@ -345,9 +344,12 @@ body {
 }
 .contact .contact-form p {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #474747;
+}
+.contact .contact-form p:last-child {
+  margin-bottom: 2rem;
 }
 .contact .contact-form .form-row {
   display: flex;
@@ -563,6 +565,10 @@ footer .github-icon img:hover {
   .education .experience-text,
   .education .education-text {
     max-width: 100%;
+  }
+  .experience .education-text,
+  .education .education-text {
+    text-align: left;
   }
   .contact {
     padding: 3rem 1rem;

@@ -143,11 +143,11 @@ body {
 
         .vector-pink {
             position: absolute;
-            top: -50%;
-            left: -24%;
+            top: -67%;
+            left: -3%;
             max-width: none;
             z-index: 1;
-            width: 75%;
+            width: 70%;
             pointer-events: none;
             transition: transform 1s ease-out, opacity 1s ease-out;
             transform: translateX(-100%);
@@ -169,7 +169,7 @@ body {
 .about {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 6rem $spacing-md;
     z-index: 1;
     background-color: $color-yellow;
@@ -337,10 +337,9 @@ body {
 .experience {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: $spacing-md;
+    justify-content: space-around;
+    padding: $spacing-md 0;
     background-color: $color-pink;
-    padding: $spacing-md;
 
     .experience-text {
         p {
@@ -356,8 +355,8 @@ body {
 .education {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 6rem $spacing-md;
+    justify-content: space-around;
+    padding: $spacing-md;
 
     .education-text {
         display: flex;
@@ -410,9 +409,12 @@ body {
 
         p {
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-size: $font-base;
             color: $text-color;
+            &:last-child {
+                margin-bottom: $spacing-md;
+            }
         }
 
         .form-row {
@@ -655,6 +657,10 @@ footer {
         .experience-text,
         .education-text {
             max-width: 100%;
+        }
+
+        .education-text {
+            text-align: left;
         }
     }
 

@@ -18,7 +18,7 @@ export default function Education() {
                     <span className={`icon ${inView ? 'rotate-loop' : ''}`}>
                         <GraduationCap size={30} />
                     </span>
-                    <p>Master`s Degree in Web Design</p>
+                    <p>Master`s Degree in Web Design and Software Development</p>
                 </div>
                 <div className="education-item">
                     <span className={`icon ${inView ? 'rotate-loop' : ''}`}>

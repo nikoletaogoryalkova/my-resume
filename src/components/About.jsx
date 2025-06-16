@@ -10,13 +10,11 @@ export default function About() {
 
          <div className="about-text">
             <p>I`m <strong>Nikoleta Ogoryalkova</strong>, a front-end developer with 5 years of experience</p>
-            <p>  building responsive and user-friendly websites.</p>
-            <p>My expertise includes <strong>HTML, CSS, and preprocessors</strong> like Sass/Less. </p>
-            <p>  Recently, I expanded my skills with <strong>JavaScript</strong> and started working with 
-            <strong>React</strong> to build</p>
-            <p>   dynamic interfaces and single-page applications.</p>
+            <p>building responsive and user-friendly websites. My expertise includes <strong>HTML, CSS,</strong></p>
+            <p>and preprocessors like <strong>Sass/Less.</strong> Recently, I expanded my skills with <strong>JavaScript</strong></p>
+            <p>and started working with <strong>React</strong> to build dynamic interfaces and single-page applications.</p>
             <p>I also use <strong>Photoshop, Figma</strong> for creating simple design elements when needed.</p>
-            <p>  I enjoy turning ideas into clean, functional, and accessible websites that work on all devices.</p>
+            <p>I enjoy turning ideas into clean, functional, and accessible websites that work on all devices.</p>
          </div>
       </section>
    );

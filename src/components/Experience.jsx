@@ -9,17 +9,16 @@ export default function Experience() {
             <h2>Experience</h2>
             <div className="experience-text">
                 <h2>Front-End Developer</h2>
-                <p>Worked closely with cross-functional teams,
-                    including designers, marketers,</p> <p>and backend developers,
-                        to bring projects from concept to completion.</p>
-                <p>Championed agile methodologies, ensuring seamless
-                workflows and faster project turnaround.</p>
+                <p>Worked closely with cross-functional teams, including designers,</p>
+                <p>marketers, and backend developers, to bring projects from concept</p>
+                <p>to completion. Championed agile methodologies, ensuring seamless</p>
+                <p>workflows and faster project turnaround.</p>
 
                 <h2>Web and Graphic Designer</h2>
                 <p>Created websites with HTML and CSS/SASS.</p>
                 <p>Marketing appearances, banners, flyers.</p>
-                <p>Supported the company`s social media channels and
-                I made photography content.</p>
+                <p>Supported the company`s social media channels</p>
+                <p>and I made photography content.</p>
             </div>
         </section>
     );
