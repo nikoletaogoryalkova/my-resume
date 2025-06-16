@@ -11,14 +11,6 @@ export default function Navigation() {
         setIsMenuOpen((prev) => !prev);
     };
 
-    // const scrollToSection = (id) => {
-    //     const section = document.getElementById(id);
-    //     if (section) {
-    //         section.scrollIntoView();
-    //     }
-    //     setIsMenuOpen(false);
-    // };
-
     const scrollToTop = () => {
         window.scrollTo({ top: 0 });
     };

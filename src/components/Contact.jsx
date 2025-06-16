@@ -20,7 +20,7 @@ export default function Contact() {
         });
     };
 
-    const [countryCode, setCountryCode] = useState('us'); // fallback
+    const [countryCode, setCountryCode] = useState('us');
 
     useEffect(() => {
         fetch('https://ipapi.co/json/')
