@@ -131,7 +131,7 @@ body {
         max-width: 50%;
         padding: 20px;
 
-        h1{
+        h1 {
             margin-bottom: 1rem;
         }
 
@@ -332,6 +332,64 @@ body {
             }
         }
     }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        cursor: zoom-out;
+    }
+    
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        box-shadow: 0 0 30px black;
+        border-radius: 6px;
+        cursor: default;
+    }
+    
+    .modal .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2rem;
+        color: #fff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .modal .prev,
+    .modal .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    
+    .modal .prev {
+        left: 30px;
+    }
+    
+    .modal .next {
+        right: 30px;
+    }
 }
 
 .experience {
@@ -356,7 +414,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: $spacing-md;
+    padding: 7rem 0;
 
     .education-text {
         display: flex;
@@ -403,8 +461,8 @@ body {
 
         h2 {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         p {
@@ -412,6 +470,7 @@ body {
             margin-bottom: 0.5rem;
             font-size: $font-base;
             color: $text-color;
+
             &:last-child {
                 margin-bottom: $spacing-md;
             }
@@ -784,6 +843,9 @@ footer {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .about h2 {
         margin-bottom: $spacing-md;
     }
 
@@ -838,60 +900,3 @@ footer {
 }
 
 
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    cursor: zoom-out;
-}
-
-.modal img {
-    max-width: 90%;
-    max-height: 90%;
-    box-shadow: 0 0 30px black;
-    border-radius: 6px;
-    cursor: default;
-}
-
-.modal .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2rem;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.modal .prev,
-.modal .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-.modal .prev {
-    left: 30px;
-}
-
-.modal .next {
-    right: 30px;
-}

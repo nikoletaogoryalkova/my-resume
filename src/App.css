@@ -278,6 +278,58 @@ body {
   color: #7b7b7b;
   transform: scale(1.1);
 }
+.projects-details .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+.projects-details .modal img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 30px black;
+  border-radius: 6px;
+  cursor: default;
+}
+.projects-details .modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.projects-details .modal .prev,
+.projects-details .modal .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.projects-details .modal .prev {
+  left: 30px;
+}
+.projects-details .modal .next {
+  right: 30px;
+}
 
 .experience {
   display: flex;
@@ -297,7 +349,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 7rem 0;
 }
 .education .education-text {
   display: flex;
@@ -339,8 +391,8 @@ body {
 }
 .contact .contact-form h2 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .contact .contact-form p {
   text-align: center;
@@ -660,6 +712,8 @@ footer .github-icon img:hover {
   }
   h2 {
     font-size: 1.5rem;
+  }
+  .about h2 {
     margin-bottom: 2rem;
   }
   .projects,
@@ -697,61 +751,4 @@ footer .github-icon img:hover {
     text-align: center;
     padding: 0.7rem 0;
   }
-}
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  cursor: zoom-out;
-}
-
-.modal img {
-  max-width: 90%;
-  max-height: 90%;
-  box-shadow: 0 0 30px black;
-  border-radius: 6px;
-  cursor: default;
-}
-
-.modal .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  color: #fff;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.modal .prev,
-.modal .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.modal .prev {
-  left: 30px;
-}
-
-.modal .next {
-  right: 30px;
 }/*# sourceMappingURL=App.css.map */
