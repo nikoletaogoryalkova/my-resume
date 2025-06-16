@@ -586,6 +586,8 @@ body {
 .react-tel-input .flag-dropdown:focus {
     border: none;
     background-color: $text-color-white;
+    border-radius: 0;
+    border-bottom:  0.5px solid $text-color;
 }
 
 footer {
